@@ -58,10 +58,3 @@ npx serve .
 ```
 
 Then visit `http://localhost:8080` in your browser.
-
-## Contact
-
-- **Email:** ghanendrablr@gmail.com
-- **Phone:** +91-7999697219
-- **LinkedIn:** [linkedin.com/in/ghanendra-yadav](https://linkedin.com/in/ghanendra-yadav)
-- **Location:** Bengaluru, India
