@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ghanendra Yadav — Senior QA Automation Engineer with 8.1+ years of experience in Playwright, API Testing, AI-Driven Testing, and Performance Testing across Fintech, Healthcare, and Travel domains.">
+  <meta name="keywords" content="QA Engineer, Automation Testing, Playwright, Selenium, API Testing, Performance Testing, AI Testing, Portfolio">
+  <meta name="author" content="Ghanendra Yadav">
+  <title>Ghanendra Yadav | Senior QA Automation Engineer — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"></noscript>
+  <link rel="stylesheet" href="style.css?v=12">
+</head>
+<body>
+  <!-- Inline script to prevent theme flash -->
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('theme');
+      const systemPrefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+      if (savedTheme === 'light' || (!savedTheme && systemPrefersLight)) {
+        document.body.classList.add('light-mode');
+      }
+    })();
+  </script>
+
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav id="navbar" class="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>GY<span class="logo-bracket"> /&gt;</span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+        <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
+        <li><a href="#experience" class="nav-link" data-section="experience">Experience</a></li>
+        <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+        <li><a href="#education" class="nav-link" data-section="education">Education</a></li>
+        <li><a href="#awards" class="nav-link" data-section="awards">Awards</a></li>
+        <li><a href="#testimonials" class="nav-link" data-section="testimonials">Testimonials</a></li>
+        <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle light/dark mode" title="Toggle theme">
+          <!-- Sun icon (shown in dark mode) -->
+          <svg class="theme-icon sun-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"/>
+            <line x1="12" y1="1" x2="12" y2="3"/>
+            <line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1" y1="12" x2="3" y2="12"/>
+            <line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
+          <!-- Moon icon (shown in light mode) -->
+          <svg class="theme-icon moon-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section id="hero" class="hero-section">
+    <canvas id="particles-canvas"></canvas>
+    <div class="hero-content">
+      <div class="hero-image-wrapper">
+        <img src="assets/profile.jpg" alt="Ghanendra Yadav — QA Automation Engineer" class="hero-image" id="hero-image">
+        <div class="image-glow"></div>
+      </div>
+      <h1 class="hero-name">GHANENDRA <span class="name-accent">YADAV</span></h1>
+      <p class="hero-tagline">
+        <span id="typing-text"></span><span class="typing-cursor">|</span>
+      </p>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-number" data-target="8" data-suffix=".1+">0</span>
+          <span class="stat-label">Years Experience</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="1100" data-suffix="+">0</span>
+          <span class="stat-label">Defects Managed</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="1.6" data-suffix="M+">0</span>
+          <span class="stat-label">Daily Transactions</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="80" data-suffix=" TPS">0</span>
+          <span class="stat-label">Stable Performance</span>
+        </div>
+      </div>
+      <div class="hero-cta">
+        <a href="assets/Ghanendra_Yadav_Resume.pdf" download class="btn btn-primary" id="download-resume-btn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download Resume
+        </a>
+        <a href="#contact" class="btn btn-secondary" id="contact-me-btn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Contact Me
+        </a>
+      </div>
+    </div>
+    <a href="#about" class="scroll-indicator" id="scroll-indicator" aria-label="Scroll down to About section">
+      <span class="scroll-text">Scroll Down</span>
+      <div class="scroll-arrow">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="7 13 12 18 17 13"/><polyline points="7 6 12 11 17 6"/></svg>
+      </div>
+    </a>
+  </section>
+
+  <!-- ===== ABOUT SECTION ===== -->
+  <section id="about" class="section about-section">
+    <div class="container">
+      <h2 class="section-title reveal">
+        <span class="title-accent">01.</span> About Me
+      </h2>
+      <div class="about-card glass-card reveal">
+        <div class="about-content">
+          <p class="about-text">
+            <strong>Results-driven QA Automation Engineer</strong> with <strong>8.1 years of experience</strong> delivering quality across high-throughput fintech platforms, healthcare systems, travel, HRMS, and LMS applications. I lead QA for a scalable Connected Banking platform processing 1.6M+ daily transactions across a 57-service distributed architecture — validated at ~78.5 TPS against an 80 TPS target with 99.9% uptime objective.
+          </p>
+          <p class="about-text">
+            My expertise spans the full testing spectrum — Functional Manual Testing, API Testing, UI Automation, Performance Testing, Integration Testing, and AI-driven quality engineering. I specialise in Playwright (TypeScript), Selenium WebDriver (Java), REST Assured, and Postman, with CI/CD integration via Jenkins and test management through JIRA, TestRail, and Zephyr. I have hands-on experience working in Agile/Scrum environments, collaborating closely with developers, product managers, and AI/ML teams to ensure high-quality, on-time releases.
+          </p>
+          <p class="about-text">
+            What sets me apart is my hands-on experience at the <strong>intersection of AI and QA</strong>. I have tested Live AI Chatbots, validated AI-driven Dispute Management flows, anomaly detection models, fraud alert systems, and AI-suggested resolutions — a rare and in-demand skill set in today's quality engineering landscape.
+          </p>
+          <p class="about-text career-goal">
+            <strong>Career Goal:</strong> To grow as a Senior QA Engineer, QA Lead, or SDET — leveraging AI-driven testing, automation at scale, and performance validation to drive quality engineering excellence in complex distributed systems and fintech platforms.
+          </p>
+          <div class="about-domains">
+            <span class="domain-badge"><svg class="badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="22" x2="21" y2="22"/><line x1="6" y1="18" x2="6" y2="11"/><line x1="10" y1="18" x2="10" y2="11"/><line x1="14" y1="18" x2="14" y2="11"/><line x1="18" y1="18" x2="18" y2="11"/><path d="m12 2 8 4H4z"/></svg>Fintech</span>
+            <span class="domain-badge"><svg class="badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>Healthcare</span>
+            <span class="domain-badge"><svg class="badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3.5c-.5-.5-2.5 0-4 1.5L13.5 8.5 5.3 6.7 4.2 7.8l8 3-3 3-2.5-.5L5 15l3 1.5L9.5 19.5 11 18l-.5-2.5 3-3 3 8 1.3-1.3z"/></svg>Travel</span>
+            <span class="domain-badge"><svg class="badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>HRMS</span>
+            <span class="domain-badge"><svg class="badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>LMS</span>
+          </div>
+        </div>
+        <div class="about-highlights">
+          <div class="highlight-item">
+            <div class="highlight-icon">
+              <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6M18 9h1.5a2.5 2.5 0 0 0 0-5H18M4 22h16M10 14.66V17c0 .55-.45 1-1 1H4v2h16v-2h-5c-.55 0-1-.45-1-1v-2.34M12 2a4 4 0 0 1 4 4v6H8V6a4 4 0 0 1 4-4z"/></svg>
+            </div>
+            <div class="highlight-text">
+              <strong>Star Performer Award</strong>
+              <span>Employee of the Month — Sixaxis Technology</span>
+            </div>
+          </div>
+          <div class="highlight-item">
+            <div class="highlight-icon">
+              <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M6 12.5v5a3 3 0 0 0 6 0v-5"/><path d="M21.5 12v6"/></svg>
+            </div>
+            <div class="highlight-text">
+              <strong>MCA — NIT Warangal</strong>
+              <span>National Institute of Technology</span>
+            </div>
+          </div>
+          <div class="highlight-item">
+            <div class="highlight-icon">
+              <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="12" cy="5" r="2"/><path d="M12 7v4M8 16h.01M16 16h.01"/><path d="M6 11V9a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2"/></svg>
+            </div>
+            <div class="highlight-text">
+              <strong>AI-Driven Testing Expert</strong>
+              <span>Chatbot, Anomaly Detection, Fraud Prevention</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS SECTION ===== -->
+  <section id="skills" class="section skills-section">
+    <div class="container">
+      <h2 class="section-title reveal">
+        <span class="title-accent">02.</span> Technical Skills
+      </h2>
+      <div class="skills-grid">
+        <!-- Manual Testing -->
+        <div class="skill-card glass-card reveal">
+          <div class="skill-card-header">
+            <div class="skill-icon">
+              <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="m9 14 2 2 4-4"/></svg>
+            </div>
+            <h3 class="skill-category">Manual Testing</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-item">
+              <div class="skill-info"><span>Functional Testing</span><span class="skill-percent">95%</span></div>
+              <div class="skill-bar"><div class="skill-progress" data-progress="95"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span>Regression Testing</span><span class="skill-percent">92%</span></div>
+              <div class="skill-bar"><div class="skill-progress" data-progress="92"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span>End-to-End Testing</span><span class="skill-percent">90%</span></div>
+              <div class="skill-bar"><div class="skill-progress" data-progress="90"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span>Smoke & Sanity Testing</span><span class="skill-percent">95%</span></div>
+              <div class="skill-bar"><div class="skill-progress" data-progress="95"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Automation Testing -->
+        <div class="skill-card glass-card reveal">
+          <div class="skill-card-header">
+            <div class="skill-icon">
+              <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 15h3M1 9h3M1 15h3"/></svg>
+            </div>
+            <h3 class="skill-category">Automation Testing</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-item">
+              <div class="skill-info"><span>Playwright + TypeScript</span><span class="skill-percent">93%</span></div>
+              <div class="skill-bar"><div class="skill-progress" data-progress="93"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span>Selenium WebDriver</span><span class="skill-percent">88%</span></div>
+              <div class="skill-bar"><div class="skill-progress" data-progress="88"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span>Java + TestNG</span><span class="skill-percent">85%</span></div>
+              <div class="skill-bar"><div class="skill-progress" data-progress="85"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span>Maven</span><span class="skill-percent">80%</span></div>
+              <div class="skill-bar"><div class="skill-progress" data-progress="80"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- API Testing -->
+        <div class="skill-card glass-card reveal">
+          <div class="skill-card-header">
+            <div class="skill-icon">
+              <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 3a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3zM6 15a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3zM18 15a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3zM9.59 13.59a3 3 0 0 0 0-4.24l-3-3a3 3 0 0 0-4.24 0 3 3 0 0 0 0 4.24l3 3a3 3 0 0 0 4.24 0z"/></svg>
+            </div>
+            <h3 class="skill-category">API Testing</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-item">
+              <div class="skill-info"><span>Playwright API Testing</span><span class="skill-percent">92%</span></div>
+              <div class="skill-bar"><div class="skill-progress" data-progress="92"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span>Postman</span><span class="skill-percent">90%</span></div>
+              <div class="skill-bar"><div class="skill-progress" data-progress="90"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span>REST Assured</span><span class="skill-percent">85%</span></div>
+              <div class="skill-bar"><div class="skill-progress" data-progress="85"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Performance Testing -->
+        <div class="skill-card glass-card reveal">
+          <div class="skill-card-header">
+            <div class="skill-icon">
+              <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 15-6.7L12 12Z"/><path d="M18 12a6 6 0 0 1-6 6"/><circle cx="12" cy="12" r="1"/></svg>
+            </div>
+            <h3 class="skill-category">Performance Testing</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-item">
+              <div class="skill-info"><span>Load & Stress Testing</span><span class="skill-percent">88%</span></div>
+              <div class="skill-bar"><div class="skill-progress" data-progress="88"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span>TPS Validation (~80 TPS)</span><span class="skill-percent">90%</span></div>
+              <div class="skill-bar"><div class="skill-progress" data-progress="90"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span>Soak Testing</span><span class="skill-percent">85%</span></div>
+              <div class="skill-bar"><div class="skill-progress" data-progress="85"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- AI Testing -->
+        <div class="skill-card glass-card reveal">
+          <div class="skill-card-header">
+            <div class="skill-icon">
+              <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8V4H8"/><rect x="2" y="8" width="20" height="12" rx="2"/><circle cx="8" cy="13" r="1"/><circle cx="16" cy="13" r="1"/><path d="M6 20v2M18 20v2"/></svg>
+            </div>
+            <h3 class="skill-category">AI-Driven Testing</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-item">
+              <div class="skill-info"><span>AI Chatbot Validation</span><span class="skill-percent">88%</span></div>
+              <div class="skill-bar"><div class="skill-progress" data-progress="88"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span>Anomaly Detection</span><span class="skill-percent">85%</span></div>
+              <div class="skill-bar"><div class="skill-progress" data-progress="85"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span>AI-Assisted Defect ID</span><span class="skill-percent">87%</span></div>
+              <div class="skill-bar"><div class="skill-progress" data-progress="87"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tools & Platforms -->
+        <div class="skill-card glass-card reveal">
+          <div class="skill-card-header">
+            <div class="skill-icon">
+              <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+            </div>
+            <h3 class="skill-category">Tools & Platforms</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-item">
+              <div class="skill-info"><span>JIRA / Linear / Bitrix24</span><span class="skill-percent">95%</span></div>
+              <div class="skill-bar"><div class="skill-progress" data-progress="95"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span>Jenkins (CI/CD)</span><span class="skill-percent">82%</span></div>
+              <div class="skill-bar"><div class="skill-progress" data-progress="82"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span>TestRail / Zephyr</span><span class="skill-percent">88%</span></div>
+              <div class="skill-bar"><div class="skill-progress" data-progress="88"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EXPERIENCE SECTION ===== -->
+  <section id="experience" class="section experience-section">
+    <div class="container">
+      <h2 class="section-title reveal">
+        <span class="title-accent">03.</span> Professional Experience
+      </h2>
+      <div class="timeline">
+        <!-- Paywize -->
+        <div class="timeline-item reveal-left">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass-card">
+            <div class="timeline-header">
+              <div class="timeline-company-info">
+                <h3 class="timeline-role">Software Test Engineer</h3>
+                <span class="timeline-company">Paywize Technologies Pvt Ltd, Bengaluru</span>
+              </div>
+              <span class="timeline-date">Aug 2025 – Present</span>
+            </div>
+            <ul class="timeline-highlights">
+              <li>Owned end-to-end QA lifecycle for a FinTech platform spanning <strong>11+ core modules</strong>, 57+ services &amp; 9 background workers across Collection, Payout &amp; Connected Banking</li>
+              <li>Validated systems supporting <strong>1.6M+ daily transactions</strong> — IMPS, NEFT, RTGS flows across CSB &amp; SIB banking channels</li>
+              <li>Executed performance testing (JMeter) achieving <strong>~78.5 TPS sustained</strong> vs 80.2 TPS target; peak load validated at <strong>100 TPS</strong></li>
+              <li>Reported <strong>400+ defects</strong> covering lien logic, MDR deduction, GST calculation, ledger reconciliation, UTR generation &amp; payout processing</li>
+              <li>Built Playwright + TypeScript UI automation framework; validated API workflows via Postman &amp; SQL for high-risk financial transaction scenarios</li>
+              <li>Applied AI-driven testing for defect prediction; validated AI Chatbot for dispute management — intent recognition, response accuracy &amp; escalation triggers</li>
+              <li>Collaborated with Backend, Frontend, Product &amp; DevOps teams for production sign-offs; participated in release triaging for critical financial features</li>
+            </ul>
+            <div class="timeline-tech">
+              <span class="tech-tag">Playwright</span>
+              <span class="tech-tag">Postman</span>
+              <span class="tech-tag">JMeter</span>
+              <span class="tech-tag">Grafana</span>
+              <span class="tech-tag">AI Testing</span>
+              <span class="tech-tag">SQL</span>
+              <span class="tech-tag">JIRA</span>
+            </div>
+            <div class="timeline-metrics">
+              <span class="metric"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg> 11+ Modules</span>
+              <span class="metric"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/></svg> 57+ Services</span>
+              <span class="metric"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg> 400+ Defects</span>
+              <span class="metric"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg> ~80 TPS Stable</span>
+              <span class="metric"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg> 100 TPS Peak</span>
+              <span class="metric"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg> 1.6M+ Txns/Day</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sixaxis -->
+        <div class="timeline-item right reveal-right">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass-card">
+            <div class="timeline-header">
+              <div class="timeline-company-info">
+                <h3 class="timeline-role">Software Test Engineer</h3>
+                <span class="timeline-company">Sixaxis Technology Pvt Ltd, Bengaluru</span>
+              </div>
+              <span class="timeline-date">Jul 2021 – May 2025</span>
+            </div>
+            <div class="award-badge">
+              <span>🏆 Star Performer Award | Employee of the Month</span>
+            </div>
+            <ul class="timeline-highlights">
+              <li>Achieved 85%+ automation coverage across critical healthcare claim workflows using Playwright</li>
+              <li>Reduced API regression cycle time by 40% using REST Assured and Postman</li>
+              <li>Managed 350+ defects in JIRA with 95%+ defect resolution rate within sprint cycles</li>
+              <li>Reduced overall release cycle time by 25% through shift-left testing practices</li>
+              <li>Achieved 80%+ test coverage for travel booking and payment flows using Selenium WebDriver</li>
+            </ul>
+            <div class="timeline-tech">
+              <span class="tech-tag">Playwright</span>
+              <span class="tech-tag">Selenium</span>
+              <span class="tech-tag">REST Assured</span>
+              <span class="tech-tag">Java</span>
+              <span class="tech-tag">TestNG</span>
+            </div>
+            <div class="timeline-metrics">
+              <span class="metric">🏥 Healthcare</span>
+              <span class="metric">✈️ Travel</span>
+              <span class="metric">✅ 85%+ Coverage</span>
+              <span class="metric">🐛 550+ Defects</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- BJSHUB -->
+        <div class="timeline-item reveal-left">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass-card">
+            <div class="timeline-header">
+              <div class="timeline-company-info">
+                <h3 class="timeline-role">QA Engineer</h3>
+                <span class="timeline-company">BJSHUB Technologies Pvt Ltd</span>
+              </div>
+              <span class="timeline-date">Jan 2018 – Jun 2021</span>
+            </div>
+            <ul class="timeline-highlights">
+              <li>Designed and executed manual test cases achieving 90%+ pass rate before UAT for HRMS modules</li>
+              <li>Conducted API testing and SQL database validation, identifying 30%+ critical defects pre-release</li>
+              <li>Achieved zero critical defects escaping to production across payroll and compliance modules</li>
+              <li>Contributed to 95%+ defect-free releases across LMS course management and certification workflows</li>
+              <li>Supported smooth product launches for 3+ client rollouts</li>
+            </ul>
+            <div class="timeline-tech">
+              <span class="tech-tag">Manual Testing</span>
+              <span class="tech-tag">Postman</span>
+              <span class="tech-tag">SQL</span>
+              <span class="tech-tag">JIRA</span>
+            </div>
+            <div class="timeline-metrics">
+              <span class="metric">👥 HRMS</span>
+              <span class="metric">📚 LMS</span>
+              <span class="metric">✅ 95%+ Quality</span>
+              <span class="metric">🐛 250+ Defects</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- WSDC NITW -->
+        <div class="timeline-item right reveal-right">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass-card">
+            <div class="timeline-header">
+              <div class="timeline-company-info">
+                <h3 class="timeline-role">Web Application Developer</h3>
+                <span class="timeline-company">Web and Software Development Cell (WSDC), NIT Warangal</span>
+              </div>
+              <span class="timeline-date">Sep 2015 – Apr 2017</span>
+            </div>
+            <ul class="timeline-highlights">
+              <li>Contributed as a Front-End Developer developing web applications and software solutions supporting institutional initiatives</li>
+              <li>Worked closely with cross-functional teams to deliver scalable, user-friendly solutions</li>
+              <li>Gained practical experience in front-end development, software engineering, collaboration, and agile project execution</li>
+            </ul>
+            <div class="timeline-tech">
+              <span class="tech-tag">HTML5</span>
+              <span class="tech-tag">CSS</span>
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">SQL</span>
+              <span class="tech-tag">GitHub</span>
+              <span class="tech-tag">Responsive Design</span>
+            </div>
+            <div class="timeline-metrics">
+              <span class="metric">🎓 NITW</span>
+              <span class="metric">💻 Front-End</span>
+              <span class="metric">🛠️ Software Quality</span>
+              <span class="metric">👥 Collaboration</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ===== PAYWIZE SPOTLIGHT SECTION ===== -->
+  <section class="section paywize-spotlight-section">
+    <div class="container">
+      <div class="paywize-spotlight-card glass-card reveal">
+        <div class="paywize-spotlight-header">
+          <div class="paywize-logo-badge">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="22" x2="21" y2="22"/><line x1="6" y1="18" x2="6" y2="11"/><line x1="10" y1="18" x2="10" y2="11"/><line x1="14" y1="18" x2="14" y2="11"/><line x1="18" y1="18" x2="18" y2="11"/><path d="m12 2 8 4H4z"/></svg>
+          </div>
+          <div>
+            <h2 class="paywize-spotlight-title">Paywize <span class="title-gradient">by Numbers</span></h2>
+            <p class="paywize-spotlight-sub">Key impact metrics from the FinTech platform I actively test &amp; validate</p>
+          </div>
+        </div>
+
+        <div class="paywize-numbers-grid">
+          <div class="paywize-number-item">
+            <div class="paywize-num" data-target="11" data-suffix="+">0</div>
+            <div class="paywize-num-label">Core Modules</div>
+          </div>
+          <div class="paywize-number-item">
+            <div class="paywize-num" data-target="57" data-suffix="+">0</div>
+            <div class="paywize-num-label">Microservices</div>
+          </div>
+          <div class="paywize-number-item">
+            <div class="paywize-num" data-target="9" data-suffix="">0</div>
+            <div class="paywize-num-label">BG Workers</div>
+          </div>
+          <div class="paywize-number-item highlight-num">
+            <div class="paywize-num" data-target="1.6" data-suffix="M+">0</div>
+            <div class="paywize-num-label">Daily Transactions</div>
+          </div>
+          <div class="paywize-number-item highlight-num">
+            <div class="paywize-num" data-target="400" data-suffix="+">0</div>
+            <div class="paywize-num-label">Defects Reported</div>
+          </div>
+          <div class="paywize-number-item">
+            <div class="paywize-num" data-target="80" data-suffix=" TPS">0</div>
+            <div class="paywize-num-label">Stable Throughput</div>
+          </div>
+          <div class="paywize-number-item">
+            <div class="paywize-num" data-target="100" data-suffix=" TPS">0</div>
+            <div class="paywize-num-label">Peak Load Validated</div>
+          </div>
+          <div class="paywize-number-item">
+            <div class="paywize-num" data-target="99.9" data-suffix="%">0</div>
+            <div class="paywize-num-label">Uptime Target</div>
+          </div>
+        </div>
+
+        <div class="paywize-domains">
+          <span class="paywize-domain-label">Domain Coverage:</span>
+          <div class="paywize-domain-chips">
+            <span class="domain-chip">VAM</span>
+            <span class="domain-chip">Connected Banking</span>
+            <span class="domain-chip">Collections</span>
+            <span class="domain-chip">Payout Engine</span>
+            <span class="domain-chip">Commercial Rules</span>
+            <span class="domain-chip">Lien Management</span>
+            <span class="domain-chip">Beneficiary Management</span>
+            <span class="domain-chip">VPA Management</span>
+            <span class="domain-chip">Channel Level Activation/Deactivation</span>
+            <span class="domain-chip">Service Level Activation/Deactivation</span>
+            <span class="domain-chip">Notification</span>
+            <span class="domain-chip">AI-Driven Dispute Management</span>
+            <span class="domain-chip">GST Statements</span>
+            <span class="domain-chip">Ledger &amp; Reconciliation</span>
+            <span class="domain-chip">IMPS / NEFT / RTGS</span>
+            <span class="domain-chip">BBPS</span>
+            <span class="domain-chip">Whitelisting</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS SECTION ===== -->
+  <section id="projects" class="section projects-section">
+    <div class="container">
+      <h2 class="section-title reveal">
+        <span class="title-accent">04.</span> Key Projects
+
+      </h2>
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <div class="project-card glass-card reveal">
+          <div class="project-icon">
+            <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="22" x2="21" y2="22"/><line x1="6" y1="18" x2="6" y2="11"/><line x1="10" y1="18" x2="10" y2="11"/><line x1="14" y1="18" x2="14" y2="11"/><line x1="18" y1="18" x2="18" y2="11"/><path d="m12 2 8 4H4z"/></svg>
+          </div>
+          <h3 class="project-name">Connected Banking & BBPS</h3>
+          <span class="project-client">Paywize | FintechOS</span>
+          <p class="project-desc">Large-scale FinTech platform spanning 11+ core modules — Collection, Payout & Connected Banking — supporting 1.6M+ daily transactions via IMPS, NEFT & RTGS across CSB & SIB banking channels. Includes VAM-based routing, BBPS integrations, lien management, beneficiary management, commercial rules engine & AI-driven fraud detection.</p>
+          <div class="project-tags">
+            <span class="tech-tag">Playwright</span>
+            <span class="tech-tag">JMeter</span>
+            <span class="tech-tag">Grafana</span>
+            <span class="tech-tag">API Testing</span>
+            <span class="tech-tag">AI Testing</span>
+            <span class="tech-tag">SQL</span>
+          </div>
+          <div class="project-stats">
+            <span>11+ Modules</span>
+            <span>57 Services</span>
+            <span>9 Workers</span>
+            <span>1.6M+ Txns/Day</span>
+            <span>78.5 TPS Stable</span>
+            <span>100 TPS Peak</span>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card glass-card reveal">
+          <div class="project-icon">
+            <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="6"/><circle cx="18" cy="18" r="4"/><path d="M12 18a6 6 0 0 0-6-6"/><path d="m14.2 10.8 4.6 4.6"/><path d="m18.8 10.8-4.6 4.6"/></svg>
+          </div>
+          <h3 class="project-name">Payout & Collection Engine</h3>
+          <span class="project-client">Paywize</span>
+          <p class="project-desc">High-volume financial transaction engine covering merchant-to-bank lifecycle — onboarding → collection → payout → reconciliation. Deep validation of MDR deduction, GST computation, lien logic, ledger balance, UTR generation, beneficiary management & commercial rules across IMPS/NEFT/RTGS payment rails.</p>
+          <div class="project-tags">
+            <span class="tech-tag">Playwright</span>
+            <span class="tech-tag">Postman</span>
+            <span class="tech-tag">SQL Validation</span>
+            <span class="tech-tag">AI Testing</span>
+            <span class="tech-tag">JIRA</span>
+          </div>
+          <div class="project-stats">
+            <span>400+ Defects</span>
+            <span>IMPS/NEFT/RTGS</span>
+            <span>Merchant + Admin</span>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card glass-card reveal">
+          <div class="project-icon">
+            <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          </div>
+          <h3 class="project-name">Healthcare — Claim Insurance</h3>
+          <span class="project-client">Healthedge</span>
+          <p class="project-desc">SaaS-based insurance application managing end-to-end lifecycle across providers, payers, and members with policy management, claims processing, and enrollment.</p>
+          <div class="project-tags">
+            <span class="tech-tag">Playwright</span>
+            <span class="tech-tag">REST Assured</span>
+            <span class="tech-tag">Postman</span>
+          </div>
+          <div class="project-stats">
+            <span>85%+ Coverage</span>
+            <span>40% Faster API</span>
+            <span>350+ Defects</span>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card glass-card reveal">
+          <div class="project-icon">
+            <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3.5c-.5-.5-2.5 0-4 1.5L13.5 8.5 5.3 6.7 4.2 7.8l8 3-3 3-2.5-.5L5 15l3 1.5L9.5 19.5 11 18l-.5-2.5 3-3 3 8 1.3-1.3z"/></svg>
+          </div>
+          <h3 class="project-name">Online Tours & Travel</h3>
+          <span class="project-client">Travelkida</span>
+          <p class="project-desc">Dynamic online travel marketplace for booking domestic and international packages with price comparison, holiday categories, and secure payment integration.</p>
+          <div class="project-tags">
+            <span class="tech-tag">Selenium</span>
+            <span class="tech-tag">Java</span>
+            <span class="tech-tag">TestNG</span>
+            <span class="tech-tag">REST Assured</span>
+          </div>
+          <div class="project-stats">
+            <span>80%+ Coverage</span>
+            <span>200+ Defects</span>
+            <span>90%+ Closure</span>
+          </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="project-card glass-card reveal">
+          <div class="project-icon">
+            <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3 class="project-name">Staffiq — HRMS</h3>
+          <span class="project-client">BJSHUB</span>
+          <p class="project-desc">Comprehensive HRMS streamlining HR operations with payroll compliance (PF, ESI, TDS), attendance, recruitment, performance management, and biometric integration.</p>
+          <div class="project-tags">
+            <span class="tech-tag">Manual Testing</span>
+            <span class="tech-tag">Postman</span>
+            <span class="tech-tag">SQL</span>
+          </div>
+          <div class="project-stats">
+            <span>90%+ Pass Rate</span>
+            <span>0 Critical Escapes</span>
+            <span>150+ Defects</span>
+          </div>
+        </div>
+
+        <!-- Project 6 -->
+        <div class="project-card glass-card reveal">
+          <div class="project-icon">
+            <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          </div>
+          <h3 class="project-name">Learnfinity — LMS</h3>
+          <span class="project-client">BJSHUB</span>
+          <p class="project-desc">Scalable LMS with multi-tenant architecture for universities and trainers featuring course management, mock tests, certifications, and Zoom/Teams integration.</p>
+          <div class="project-tags">
+            <span class="tech-tag">Manual Testing</span>
+            <span class="tech-tag">Postman</span>
+            <span class="tech-tag">SQL</span>
+          </div>
+          <div class="project-stats">
+            <span>95%+ Quality</span>
+            <span>3+ Rollouts</span>
+            <span>100+ Defects</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EDUCATION SECTION ===== -->
+  <section id="education" class="section education-section">
+    <div class="container">
+      <h2 class="section-title reveal">
+        <span class="title-accent">05.</span> Education
+      </h2>
+      <div class="education-grid">
+        <div class="education-card glass-card reveal">
+          <div class="edu-icon">
+            <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M6 12.5v5a3 3 0 0 0 6 0v-5"/><path d="M21.5 12v6"/></svg>
+          </div>
+          <h3 class="edu-degree">Master of Computer Applications (MCA), Computer Science</h3>
+          <span class="edu-institution">National Institute of Technology, Warangal (NITW)</span>
+          <span class="edu-year">2014 – 2017</span>
+          <div class="edu-badge">NIT Warangal</div>
+          <p class="edu-desc">
+            Pursued a Master of Computer Applications (MCA) at NIT Warangal, gaining strong foundations in software engineering, algorithms, database systems, web technologies, and application development. The program provided hands-on exposure to real-world software development practices and emerging technologies, shaping my passion for building scalable and impactful technology solutions.
+          </p>
+          <ul class="edu-highlights">
+            <li><strong>Activities & Societies</strong>: Active member of the Web and Software Development Cell (WSDC), contributing to collaborative software development projects, technical discussions, and innovation-focused initiatives.</li>
+            <li><strong>Skills Strengthened</strong>: Developed core competency in leadership, teamwork, problem-solving, and software engineering.</li>
+          </ul>
+        </div>
+        <div class="education-card glass-card reveal">
+          <div class="edu-icon">
+            <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+          </div>
+          <h3 class="edu-degree">Bachelor's Degree, Computer Science</h3>
+          <span class="edu-institution">Bundelkhand University Campus, Jhansi</span>
+          <span class="edu-year">2010 – 2013</span>
+          <div class="edu-badge">BU Campus</div>
+          <p class="edu-desc">
+            Pursued my Bachelor's degree with a strong focus on academic excellence, personal development, and extracurricular engagement. Alongside my studies, I actively participated in leadership and community-focused initiatives through the National Cadet Corps (NCC) and National Service Scheme (NSS).
+          </p>
+          <ul class="edu-highlights">
+            <li><strong>Activities & Societies</strong>: Active Cadet in the National Cadet Corps (NCC) and Volunteer in the National Service Scheme (NSS).</li>
+            <li><strong>Skills Strengthened</strong>: Developed discipline, teamwork, leadership, social responsibility, and effective communication skills.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HONORS & AWARDS SECTION ===== -->
+  <section id="awards" class="section awards-section">
+    <div class="container">
+      <h2 class="section-title reveal">
+        <span class="title-accent">06.</span> Honors & Awards
+      </h2>
+      <div class="awards-grid">
+        <!-- Award 1 -->
+        <div class="award-card glass-card reveal">
+          <div class="award-icon">
+            <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          </div>
+          <h3 class="award-title">Utsav – Feel More Alive (Act-1)</h3>
+          <span class="award-issuer">Issued by The Art of Living</span>
+          <span class="award-date">Feb 2011</span>
+          <span class="award-assoc">Associated with Bundelkhand University</span>
+          <p class="award-description">
+            Recognized with a certification from The Art of Living for participation in "Utsav – Feel More Alive (Act-1)" at Bundelkhand University. The program focused on mindfulness, personal effectiveness, stress management, leadership, and holistic development, enhancing self-discipline and overall well-being.
+          </p>
+          <a href="#" class="award-link" target="_blank">
+            <span>View Certificate</span>
+            <svg class="link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
+        </div>
+
+        <!-- Award 2 -->
+        <div class="award-card glass-card reveal">
+          <div class="award-icon">
+            <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3 class="award-title">National Cadet Corps (NCC)</h3>
+          <span class="award-issuer">Issued by 56 UP Battalion NCC Jhansi</span>
+          <span class="award-date">Jan 2011</span>
+          <span class="award-assoc">Associated with Bundelkhand University</span>
+          <div class="award-description">
+            Awarded and recognized as an active National Cadet Corps (NCC) Cadet with the 56 UP Battalion, Jhansi.
+            <ul class="award-highlights">
+              <li>Earned two Combined Annual Training Camp (CATC) Certificates through successful participation in intensive training and leadership development programs.</li>
+              <li>Achieved the NCC 'B' Certificate with a 'B' Grade, demonstrating proficiency in discipline, leadership, teamwork, and cadet training.</li>
+            </ul>
+          </div>
+          <a href="#" class="award-link" target="_blank">
+            <span>View Certificate</span>
+            <svg class="link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
+        </div>
+
+        <!-- Award 3 -->
+        <div class="award-card glass-card reveal">
+          <div class="award-icon">
+            <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+          </div>
+          <h3 class="award-title">15th National Jamboree of The Bharat Scouts and Guides</h3>
+          <span class="award-issuer">Issued by The Bharat Scouts and Guides</span>
+          <span class="award-date">Oct 2005</span>
+          <p class="award-description">
+            Selected to represent the Madhya Pradesh Contingent at the 15th National Jamboree of The Bharat Scouts and Guides in Haridwar, Uttarakhand. Earned multiple awards and recognitions for excellence in various competitive and team-based activities, demonstrating leadership, discipline, teamwork, and a strong commitment to personal development and community engagement.
+          </p>
+          <a href="#" class="award-link" target="_blank">
+            <span>View Certificate</span>
+            <svg class="link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
+        </div>
+
+        <!-- Award 4 -->
+        <div class="award-card glass-card reveal">
+          <div class="award-icon">
+            <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          </div>
+          <h3 class="award-title">Bharatiya Sanskriti Gyan Pariksha</h3>
+          <span class="award-issuer">Issued by Gayatritirth Shantikunj Haridwar</span>
+          <span class="award-date">Jan 2005</span>
+          <p class="award-description">
+            Awarded three Certificates of Excellence for securing Second Rank at the school level in the Bharatiya Sanskriti Gyan Pariksha in 2005, 2007, and 2008. This recognition reflects consistent academic performance, cultural knowledge, and a commitment to continuous learning and personal development.
+          </p>
+          <a href="#" class="award-link" target="_blank">
+            <span>View Certificate</span>
+            <svg class="link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS SECTION ===== -->
+  <section id="testimonials" class="section testimonials-section">
+    <div class="container">
+      <h2 class="section-title reveal">
+        <span class="title-accent">07.</span> Testimonials
+      </h2>
+      <div class="testimonials-wrapper reveal">
+        <button class="testimonial-prev" id="testimonial-prev" aria-label="Previous testimonial">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <div class="testimonials-container">
+          <div class="testimonials-track" id="testimonials-track">
+            <div class="testimonial-card glass-card">
+              <div class="testimonial-quote">"</div>
+              <p class="testimonial-text">Ghanendra is one of the most thorough QA engineers I've worked with. His ability to design comprehensive test strategies for our Connected Banking platform was exceptional. He identified critical defects early, saving us significant production costs.</p>
+              <div class="testimonial-author">
+                <div class="testimonial-avatar">PM</div>
+                <div class="testimonial-info">
+                  <strong>Project Manager</strong>
+                  <span>Paywize Technologies</span>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card glass-card">
+              <div class="testimonial-quote">"</div>
+              <p class="testimonial-text">His expertise in Playwright automation transformed our testing efficiency. Ghanendra achieved 85%+ automation coverage for our healthcare claim workflows and reduced our API regression cycle time by 40%. A true asset to any QA team.</p>
+              <div class="testimonial-author">
+                <div class="testimonial-avatar">TL</div>
+                <div class="testimonial-info">
+                  <strong>Technical Lead</strong>
+                  <span>Sixaxis Technology</span>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card glass-card">
+              <div class="testimonial-quote">"</div>
+              <p class="testimonial-text">Working with Ghanendra on AI-driven testing was incredible. His testing of our AI chatbot's intent recognition and dispute management flows ensured we launched with confidence. His attention to edge cases is remarkable.</p>
+              <div class="testimonial-author">
+                <div class="testimonial-avatar">AI</div>
+                <div class="testimonial-info">
+                  <strong>AI/ML Team Lead</strong>
+                  <span>Paywize Technologies</span>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card glass-card">
+              <div class="testimonial-quote">"</div>
+              <p class="testimonial-text">Ghanendra's performance testing skills are outstanding. Validating ~78.5 TPS against our 80 TPS target across a 57-service architecture handling 1.6M+ daily transactions — he ensured our platform could scale with confidence.</p>
+              <div class="testimonial-author">
+                <div class="testimonial-avatar">EM</div>
+                <div class="testimonial-info">
+                  <strong>Engineering Manager</strong>
+                  <span>Paywize Technologies</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="testimonial-next" id="testimonial-next" aria-label="Next testimonial">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+      </div>
+      <div class="testimonial-dots" id="testimonial-dots">
+        <span class="testimonial-dot active" data-index="0"></span>
+        <span class="testimonial-dot" data-index="1"></span>
+        <span class="testimonial-dot" data-index="2"></span>
+        <span class="testimonial-dot" data-index="3"></span>
+      </div>
+      <p class="testimonials-note">
+        <em>* Placeholder testimonials — update with real quotes from colleagues and managers</em>
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT SECTION ===== -->
+  <section id="contact" class="section contact-section">
+    <div class="container">
+      <h2 class="section-title reveal">
+        <span class="title-accent">08.</span> Get In Touch
+      </h2>
+      <div class="contact-grid reveal">
+        <div class="contact-form-wrapper glass-card">
+          <h3 class="contact-subtitle">Send Me a Message</h3>
+          <form id="contact-form" class="contact-form">
+            <div class="form-group">
+              <input type="text" id="contact-name" name="name" placeholder="Your Name" required autocomplete="name">
+              <label for="contact-name">Your Name</label>
+            </div>
+            <div class="form-group">
+              <input type="email" id="contact-email" name="email" placeholder="Your Email" required autocomplete="email">
+              <label for="contact-email">Your Email</label>
+            </div>
+            <div class="form-group">
+              <input type="text" id="contact-subject" name="subject" placeholder="Subject" required>
+              <label for="contact-subject">Subject</label>
+            </div>
+            <div class="form-group">
+              <textarea id="contact-message" name="message" placeholder="Your Message" rows="5" required></textarea>
+              <label for="contact-message">Your Message</label>
+            </div>
+            <button type="submit" class="btn btn-primary btn-submit" id="contact-submit-btn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              Send Message
+            </button>
+          </form>
+          <div class="form-success" id="form-success">
+            <div class="success-icon">✅</div>
+            <h4>Message Sent Successfully!</h4>
+            <p>Thank you for reaching out. I'll get back to you soon.</p>
+          </div>
+        </div>
+        <div class="contact-info-wrapper">
+          <div class="contact-info-card glass-card">
+            <div class="contact-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <h4>Email</h4>
+            <a href="mailto:ghanendrablr@gmail.com" id="contact-email-link">ghanendrablr@gmail.com</a>
+          </div>
+          <div class="contact-info-card glass-card">
+            <div class="contact-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <h4>Phone</h4>
+            <a href="tel:+917999697219" id="contact-phone-link">+91-7999697219</a>
+          </div>
+          <div class="contact-info-card glass-card">
+            <div class="contact-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <h4>Location</h4>
+            <span>Bengaluru, India</span>
+          </div>
+          <div class="contact-info-card glass-card">
+            <div class="contact-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </div>
+            <h4>LinkedIn</h4>
+            <a href="https://linkedin.com/in/ghanendra-yadav" target="_blank" rel="noopener noreferrer" id="contact-linkedin-link">linkedin.com/in/ghanendra-yadav</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <span class="logo-bracket">&lt;</span>GY<span class="logo-bracket"> /&gt;</span>
+        </div>
+        <p class="footer-text">Designed & Built by <strong>Ghanendra Yadav</strong> | QA Automation Engineer</p>
+        <div class="footer-socials">
+          <a href="mailto:ghanendrablr@gmail.com" class="footer-social" aria-label="Email" id="footer-email-link">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </a>
+          <a href="https://linkedin.com/in/ghanendra-yadav" target="_blank" rel="noopener noreferrer" class="footer-social" aria-label="LinkedIn" id="footer-linkedin-link">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="tel:+917999697219" class="footer-social" aria-label="Phone" id="footer-phone-link">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </a>
+        </div>
+        <p class="footer-copyright">&copy; 2026 Ghanendra Yadav. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <script src="script.js?v=2"></script>
+</body>
+</html>
