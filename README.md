@@ -33,6 +33,12 @@ Ghanendra-Portfolio/
     └── Ghanendra_Yadav_Resume.pdf  # Downloadable resume
 ```
 
+## Deployment
+
+- Ready to host as a static website.
+- Ideal for GitHub Pages: push the repository to GitHub and set the repository source to `main` or `gh-pages`.
+- No build step needed — the site works directly from `index.html`.
+
 ## Features
 
 - Responsive design (mobile, tablet, desktop)
@@ -58,3 +64,4 @@ npx serve .
 ```
 
 Then visit `http://localhost:8080` in your browser.
+this is the test
