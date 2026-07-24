@@ -7,7 +7,7 @@ A personal portfolio website for **Ghanendra Yadav**, Senior QA Automation Engin
 - **About** — Professional background, career goals, and domain expertise
 - **Skills** — Manual Testing, Automation, API, Performance, AI-Driven Testing, Tools & Platforms
 - **Experience** — Career timeline across Paywize, Sixaxis Technology, BJSHUB, and NIT Warangal
-- **Projects** — Key projects including Connected Banking, Healthcare Claim Insurance, Travel, HRMS, and LMS
+- **Projects** — 11 individual case-study pages (Collection Engine, Payout Engine, Connected Banking, BBPS, Reseller Management, AI Dispute Resolution Engine, YOBO, Healthcare Claim Insurance, Travel Marketplace, HRMS, LMS), each with its own `/projects/<slug>/` page, clickable employer link, and GitHub repository link
 - **Education** — MCA from NIT Warangal; B.Sc. from Bundelkhand University
 - **Awards** — NCC, Bharat Scouts & Guides, Art of Living, and academic recognitions
 - **Testimonials** — Feedback from managers and team leads
@@ -25,12 +25,24 @@ A personal portfolio website for **Ghanendra Yadav**, Senior QA Automation Engin
 
 ```
 Ghanendra-Portfolio/
-├── index.html       # Main HTML file
-├── style.css        # Stylesheet
+├── index.html       # Main HTML file (single-page site, includes Key Projects grid)
+├── style.css        # Stylesheet (includes shared project-detail-page styles)
 ├── script.js        # JavaScript (animations, theme toggle, typing effect)
-└── assets/
-    ├── profile.jpg               # Profile photo
-    └── Ghanendra_Yadav_Resume.pdf  # Downloadable resume
+├── assets/
+│   ├── profile.jpg               # Profile photo
+│   └── Ghanendra_Yadav_Resume.pdf  # Downloadable resume
+└── projects/         # One folder per case-study page, each served at /projects/<slug>/
+    ├── fintech-collection-engine/index.html
+    ├── fintech-payout-engine/index.html
+    ├── fintech-connected-banking/index.html
+    ├── bbps-bill-payment/index.html
+    ├── reseller-management/index.html
+    ├── ai-dispute-resolution-engine/index.html
+    ├── yobo/index.html
+    ├── healthcare-insurance/index.html
+    ├── travel-marketplace/index.html
+    ├── hrms/index.html
+    └── lms/index.html
 ```
 
 ## Deployment
