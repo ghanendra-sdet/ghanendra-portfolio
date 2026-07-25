@@ -3215,6 +3215,111 @@ body.light-mode .form-textarea::placeholder {
   line-height: 1.7;
 }
 
+/* Complexity chip — a stronger-weight meta-chip variant */
+.meta-chip-strong {
+  color: var(--domain-accent);
+  border-color: color-mix(in srgb, var(--domain-accent) 35%, var(--glass-border));
+  background: color-mix(in srgb, var(--domain-accent) 8%, rgba(255, 255, 255, 0.03));
+  font-weight: 700;
+}
+
+/* Challenge → Approach → Outcome cards */
+.challenge-card {
+  padding: 26px 28px;
+  border-radius: 16px;
+  border: 1px solid var(--glass-border);
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  margin-bottom: 20px;
+  transition: border-color var(--transition-smooth), transform var(--transition-smooth);
+}
+
+.challenge-card:last-child {
+  margin-bottom: 0;
+}
+
+.challenge-card:hover {
+  border-color: var(--domain-accent);
+  transform: translateY(-2px);
+}
+
+.challenge-card h5 {
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+.challenge-row {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 16px;
+  padding: 12px 0;
+  border-top: 1px solid var(--glass-border);
+}
+
+.challenge-row:first-of-type {
+  border-top: none;
+  padding-top: 0;
+}
+
+.challenge-row:last-child {
+  padding-bottom: 0;
+}
+
+.challenge-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--domain-accent);
+  padding-top: 2px;
+}
+
+.challenge-row p {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.75;
+}
+
+/* Proof / artifact-availability note */
+.proof-note {
+  padding: 22px 26px;
+  border-radius: 14px;
+  background: color-mix(in srgb, var(--domain-accent) 5%, transparent);
+  border: 1px dashed color-mix(in srgb, var(--domain-accent) 30%, transparent);
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.proof-note svg {
+  width: 22px;
+  height: 22px;
+  color: var(--domain-accent);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.proof-note p {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.75;
+}
+
+.proof-note strong {
+  color: var(--text-primary);
+}
+
+@media (max-width: 480px) {
+  .challenge-row {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+}
+
 /* Bottom footer CTA */
 .detail-footer-cta {
   display: flex;
