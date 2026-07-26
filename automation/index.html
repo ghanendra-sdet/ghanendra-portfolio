@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Paywize Automation Testing Framework — a Hybrid (Page Object Model + Data-Driven + API Mocking) Playwright test automation framework covering 12 admin modules, 120 test cases, and 2 real product bugs found.">
+  <meta name="keywords" content="QA Engineer, Test Automation, Playwright, Hybrid Framework, Page Object Model, Data-Driven Testing, API Mocking, Portfolio">
+  <meta name="author" content="Ghanendra Yadav">
+  <title>Automation Framework | Ghanendra Yadav — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"></noscript>
+  <link rel="stylesheet" href="../style.css?v=16">
+</head>
+<body class="domain-automation">
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('theme');
+      const systemPrefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+      if (savedTheme === 'light' || (!savedTheme && systemPrefersLight)) {
+        document.body.classList.add('light-mode');
+      }
+    })();
+  </script>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav id="navbar" class="navbar">
+    <div class="nav-container">
+      <a href="../index.html#hero" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>GY<span class="logo-bracket"> /&gt;</span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="../index.html#about" class="nav-link">About</a></li>
+        <li><a href="../index.html#skills" class="nav-link">Skills</a></li>
+        <li><a href="../index.html#experience" class="nav-link">Experience</a></li>
+        <li><a href="../index.html#projects" class="nav-link active">Projects</a></li>
+        <li><a href="../index.html#education" class="nav-link">Education</a></li>
+        <li><a href="../index.html#awards" class="nav-link">Awards</a></li>
+        <li><a href="../index.html#testimonials" class="nav-link">Testimonials</a></li>
+        <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle light/dark mode" title="Toggle theme">
+          <svg class="theme-icon sun-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
+          <svg class="theme-icon moon-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+          <span class="hamburger-line"></span><span class="hamburger-line"></span><span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== BACK LINK ===== -->
+  <div class="detail-backlink-wrap">
+    <div class="container">
+      <a href="../index.html#projects" class="detail-backlink reveal">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+        Back to Portfolio
+      </a>
+    </div>
+  </div>
+
+  <!-- ===== HERO ===== -->
+  <header class="project-detail-hero domain-automation">
+    <div class="container">
+      <div class="detail-hero-icon reveal">
+        <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
+      </div>
+      <span class="detail-domain-label reveal">Automation &amp; Framework Engineering</span>
+      <h1 class="detail-title reveal">Paywize Automation Testing Framework</h1>
+      <p class="detail-tagline reveal">A Hybrid test automation framework (Page Object Model + Data-Driven Testing + API Mocking) built to test the Paywize fintech admin dashboard — written so someone with zero prior context can read it top to bottom and understand exactly what exists, why it's built this way, and what it has already found.</p>
+      <div class="detail-meta-row reveal">
+        <a href="https://paywize.in/" target="_blank" rel="noopener noreferrer" class="company-badge">
+          <span class="company-badge-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+          </span>
+          Paywize Technologies Private Limited, Bengaluru
+          <svg class="external-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        </a>
+        <span class="meta-chip">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          QA Automation Engineer
+        </span>
+        <span class="meta-chip">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="18" r="3"/><circle cx="6" cy="6" r="3"/><path d="M13 6h3a2 2 0 0 1 2 2v7"/><path d="M11 18H8a2 2 0 0 1-2-2V9"/></svg>
+          Hybrid Framework
+        </span>
+        <span class="meta-chip meta-chip-strong">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          Complexity: High
+        </span>
+      </div>
+      <div class="detail-hero-cta reveal">
+        <a href="https://github.com/ghanendra-sdet/Playwright-Starter-Framework" target="_blank" rel="noopener noreferrer" class="btn-domain">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.09 3.29 9.4 7.86 10.93.57.1.78-.25.78-.55v-1.94c-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.68-1.28-1.68-1.04-.72.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.75 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.05 11.05 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.24 2.76.12 3.05.74.81 1.18 1.83 1.18 3.09 0 4.41-2.69 5.39-5.25 5.67.41.36.78 1.07.78 2.15v3.19c0 .3.21.66.79.55A10.51 10.51 0 0 0 23.5 12c0-6.35-5.15-11.5-11.5-11.5z"/></svg>
+          View on GitHub
+        </a>
+        <a href="#overview" class="btn-github-outline">
+          Explore the Framework
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== OVERVIEW ===== -->
+  <section class="detail-section" id="overview">
+    <div class="container">
+      <h2 class="detail-section-heading reveal">What This Project Actually Is</h2>
+      <p class="detail-lede reveal">Paywize is a live fintech admin/merchant dashboard. This repository is an automated test suite that logs into it like a real user, clicks through every module (Payout, Collection, Connected Banking, Reports, and more), and checks that things behave correctly — instead of a human manually clicking through the same 120 checks every time something changes.</p>
+      <div class="detail-stats-grid">
+        <div class="detail-stat-card glass-card reveal">
+          <span class="detail-stat-number">12/12</span>
+          <span class="detail-stat-label">Admin Modules Built</span>
+        </div>
+        <div class="detail-stat-card glass-card reveal">
+          <span class="detail-stat-number">120</span>
+          <span class="detail-stat-label">Total Test Cases</span>
+        </div>
+        <div class="detail-stat-card glass-card reveal">
+          <span class="detail-stat-number">2</span>
+          <span class="detail-stat-label">Real Product Bugs Found</span>
+        </div>
+        <div class="detail-stat-card glass-card reveal">
+          <span class="detail-stat-number">~75/100</span>
+          <span class="detail-stat-label">Scope-Completeness</span>
+        </div>
+      </div>
+      <div class="detail-content-grid" style="margin-top: 32px; grid-template-columns: repeat(3, 1fr);">
+        <div class="detail-card glass-card reveal">
+          <h4 style="font-size: 0.95rem;">Tech Stack</h4>
+          <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7;">Playwright (browser automation) + plain JavaScript. No React/TypeScript in the test code itself — it drives a real Chromium/Firefox/WebKit browser against the live dashboard.</p>
+        </div>
+        <div class="detail-card glass-card reveal">
+          <h4 style="font-size: 0.95rem;">Who It's For</h4>
+          <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7;">Written explicitly with every rule and pattern documented with the reasoning behind it, not just "how" — so someone brand-new to automation testing can pick it up.</p>
+        </div>
+        <div class="detail-card glass-card reveal">
+          <h4 style="font-size: 0.95rem;">What "Done" Means Here</h4>
+          <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7;">All 12 planned Admin modules have real, passing tests — plus 2 tests that are <em>meant</em> to fail, because they document a real bug in the live product.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HYBRID FRAMEWORK ===== -->
+  <section class="detail-section alt-bg" id="hybrid">
+    <div class="container">
+      <h2 class="detail-section-heading reveal">Why "Hybrid" and Not Just POM?</h2>
+      <p class="detail-lede reveal">The industry term for this framework's design is <strong>Hybrid</strong> — not "just Page Object Model." Three separate patterns are deliberately layered together, each solving a different problem.</p>
+
+      <div class="pillars-grid">
+        <div class="pillar-card reveal">
+          <span class="pillar-num">01 · LOCATE</span>
+          <h4>Page Object Model</h4>
+          <p>Every screen is a class with methods like <code>clickAndValidateUrl(...)</code>. Tests call the method — they never touch a raw element directly.</p>
+        </div>
+        <div class="pillar-card pillar-2 reveal">
+          <span class="pillar-num">02 · LOCALIZE</span>
+          <h4>Data-Driven Testing</h4>
+          <p>Selectors and expected values live in external JSON, not inside the code. A drifted selector or changed number is a JSON edit, not a code change.</p>
+        </div>
+        <div class="pillar-card pillar-3 reveal">
+          <span class="pillar-num">03 · SIMULATE</span>
+          <h4>API Mocking</h4>
+          <p>When a test needs an exact, guaranteed number to assert against, the real network response is intercepted and swapped for a fake, predictable one.</p>
+        </div>
+      </div>
+
+      <div class="mnemonic-band reveal">"<span>Locate</span>. <span>Localize</span>. <span>Simulate</span>."</div>
+
+      <h3 style="font-size: 1.1rem; font-weight: 700; color: var(--text-primary); margin: 30px 0 14px;">Why not just plain POM? Three real bugs from this repo are the proof</h3>
+      <div class="detail-content-grid" style="grid-template-columns: repeat(2, 1fr);">
+        <div class="detail-card glass-card reveal">
+          <b style="font-size: 0.86rem; color: var(--domain-accent);">"Locate" saved us</b>
+          <p style="font-size: 0.86rem; color: var(--text-secondary); margin-top: 8px; line-height: 1.7;">Merchants' badge selectors matched "Active" <em>inside</em> "Inactive" (a substring collision). Fix = edit 7 lines in one JSON file. In plain POM that's opening a class and editing logic across 7 methods — much riskier.</p>
+        </div>
+        <div class="detail-card glass-card reveal">
+          <b style="font-size: 0.86rem; color: var(--blue, #3b82f6);">"Localize" saved us</b>
+          <p style="font-size: 0.86rem; color: var(--text-secondary); margin-top: 8px; line-height: 1.7;">Connected Banking's real URLs (<code>/transactions</code>, <code>/lien</code>) turned out different from our guesses. Fix = a 2-line JSON edit, zero code touched.</p>
+        </div>
+        <div class="detail-card glass-card reveal">
+          <b style="font-size: 0.86rem; color: #f59e0b;">"Simulate" saved us</b>
+          <p style="font-size: 0.86rem; color: var(--text-secondary); margin-top: 8px; line-height: 1.7;">Dashboard's Collection amount changes constantly on the live site — you can't assert against a moving number. Mocking the API freezes it so the assertion is even possible.</p>
+        </div>
+        <div class="detail-card glass-card reveal" style="display: flex; align-items: center;">
+          <p style="font-size: 0.86rem; color: var(--text-secondary); margin: 0; line-height: 1.7;"><strong style="color: var(--text-primary);">The interview-ready line:</strong> "Hybrid — POM for structure, Data-Driven for values, Mocking for predictability — because this is a live, evolving fintech product, not a toy app."</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ENGINE ROOM ===== -->
+  <section class="detail-section" id="core">
+    <div class="container">
+      <h2 class="detail-section-heading reveal">The Engine Room — <code style="font-size: 0.8em;">src/core</code></h2>
+      <p class="detail-lede reveal">Five files do all the repetitive plumbing so every Page Object and test stays thin. Each one powers exactly one pillar above — you build <em>on</em> these, you almost never edit them.</p>
+      <div class="chip-grid" style="grid-template-columns: 1fr;">
+        <div class="chip-item" style="justify-content: space-between; flex-wrap: wrap;"><span><code>WebUtil.js</code> — <span style="color: var(--domain-accent); font-weight: 600;">Locate</span></span><span style="font-weight: 400; color: var(--text-secondary); font-size: 0.82rem;">Wraps every raw Playwright action (click, fill, getText, waitForUrl…) with logging, timeouts, readable errors.</span></div>
+        <div class="chip-item" style="justify-content: space-between; flex-wrap: wrap;"><span><code>SelectorManager.js</code> — <span style="color: var(--domain-accent); font-weight: 600;">Localize</span></span><span style="font-weight: 400; color: var(--text-secondary); font-size: 0.82rem;">Reads <code>locators/PageSelectors.json</code> once, caches it, hands back one page's selectors by class name.</span></div>
+        <div class="chip-item" style="justify-content: space-between; flex-wrap: wrap;"><span><code>TestDataManager.js</code> — <span style="color: var(--domain-accent); font-weight: 600;">Localize</span></span><span style="font-weight: 400; color: var(--text-secondary); font-size: 0.82rem;">Reads <code>test-data/**/*.json</code> by test name; resolves login credentials via <code>Config.js</code>'s env-var table.</span></div>
+        <div class="chip-item" style="justify-content: space-between; flex-wrap: wrap;"><span><code>CommonUtil.js</code> — <span style="color: var(--domain-accent); font-weight: 600;">Simulate</span></span><span style="font-weight: 400; color: var(--text-secondary); font-size: 0.82rem;"><code>mockApiResponse()</code> / <code>removeMock()</code> — intercepts/restores network calls via <code>page.route()</code>.</span></div>
+        <div class="chip-item" style="justify-content: space-between; flex-wrap: wrap;"><span><code>PageManager.js</code> — <span style="color: var(--domain-accent); font-weight: 600;">Facade</span></span><span style="font-weight: 400; color: var(--text-secondary); font-size: 0.82rem;">One object (<code>sharedPages</code>) exposing every Page Object as a lazy getter, plus test-data shortcuts.</span></div>
+      </div>
+      <div class="risk-callout" style="margin-top: 24px;">
+        <h5>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+          The One Sequence Worth Remembering
+        </h5>
+        <p>Every Page Object method starts with <code>await this.ensureSelectors()</code>. That awaits a promise the constructor already kicked off — instant after the first call, but skip it and <code>this.selectors</code> might still be empty when your method reads it.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MENTAL MODEL ===== -->
+  <section class="detail-section alt-bg" id="mental-model">
+    <div class="container">
+      <h2 class="detail-section-heading reveal">How One Test Actually Runs</h2>
+      <p class="detail-lede reveal">Trace this once for <code>should validate dashboard collection amount</code> and every other test in the repo follows the same shape.</p>
+      <div class="detail-card glass-card reveal">
+        <ol class="flow-steps">
+          <li>Playwright loads the saved session (<code>.auth/admin.json</code>) — the browser opens already logged in.</li>
+          <li>The spec registers a mock: <code>commonUtil.mockApiResponse(url, dashboardCollectionMock)</code> — "if the page asks for this URL, return fake JSON instead."</li>
+          <li>The spec reloads the page — the app's real frontend code fires its real API call.</li>
+          <li>Playwright intercepts that exact call and returns the fake JSON from step 2.</li>
+          <li><code>dashboardPage.validateCollectionAmount(expected)</code> runs: loads selectors → reads the DOM text → compares to the expected value.</li>
+          <li>Test passes or throws a descriptive error based on that one comparison.</li>
+        </ol>
+      </div>
+      <p class="detail-lede reveal" style="margin-top: 20px; margin-bottom: 0;">Every test = <strong style="color: var(--text-primary);">mock → reload/navigate → call a Page Object method → compare against test data.</strong> Once this clicks, every spec file in the repo reads the same way.</p>
+    </div>
+  </section>
+
+  <!-- ===== PROJECT STRUCTURE ===== -->
+  <section class="detail-section" id="structure">
+    <div class="container">
+      <h2 class="detail-section-heading reveal">Project Structure — The Golden Rule</h2>
+      <p class="detail-lede reveal"><strong style="color: var(--text-primary);">If you're adding a value, it goes in a JSON file. If you're adding behavior, it goes in a JS class.</strong> Nothing is ever hardcoded inside a test file. Below is the complete real tree, followed by a direct side-by-side against what this same project would look like as plain POM.</p>
+
+      <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-bottom: 12px;">The complete tree, annotated</h4>
+      <pre class="code-tree">paywize-automation-testing/
+│
+├── <span class="t-dir">src/</span>
+│   ├── config/
+│   │   ├── Config.js                 <span class="t-comment">← reads env vars: base URL, credentials, timeouts, workers…</span>
+│   │   └── GlobalSetup.js            <span class="t-comment">← runs once before all tests, ensures .auth/ exists</span>
+│   │
+│   └── core/                         <span class="t-comment">← the engine room — see section above, rarely touched</span>
+│       ├── PageManager.js            <span class="t-comment">← facade: every Page Object as a lazy camelCase getter</span>
+│       ├── WebUtil.js                <span class="t-comment">← low-level Playwright wrappers (click, fill, wait, assert…)</span>
+│       ├── SelectorManager.js        <span class="t-comment">← loads + caches locators/PageSelectors.json</span>
+│       ├── TestDataManager.js        <span class="t-comment">← loads test-data/*.json, resolves credentials by userType</span>
+│       └── CommonUtil.js             <span class="t-comment">← API mocking (mockApiResponse / removeMock)</span>
+│
+├── <span class="t-dir">pages/</span>                            <span class="t-comment">← what you'll actually write, day to day</span>
+│   ├── BasePage.js                    <span class="t-comment">← every Page Object extends this (ensureSelectors lives here)</span>
+│   ├── common/auth/                   LoginPage.js, LogoutPage.js
+│   ├── admin/
+│   │   ├── dashboard/DashboardPage.js
+│   │   ├── merchants/MerchantsPage.js
+│   │   ├── payout/PayoutPage.js
+│   │   ├── connectedBanking/ConnectedBankingPage.js
+│   │   ├── collection/CollectionPage.js
+│   │   ├── reports/ReportsPage.js
+│   │   ├── teamManagement/TeamManagementPage.js
+│   │   ├── logs/LogsPage.js
+│   │   ├── support/SupportPage.js
+│   │   └── settings/SettingsPage.js
+│   └── merchant/dashboard/MerchantDashboardPage.js   <span class="t-comment">← built, currently paused</span>
+│
+├── <span class="t-dir">locators/</span>
+│   └── PageSelectors.json            <span class="t-comment">← every selector for every page, one file, keyed by class name</span>
+│
+├── <span class="t-dir">test-data/</span>
+│   ├── LoginTestData.json
+│   ├── admin/&lt;feature&gt;/&lt;Feature&gt;TestData.json   <span class="t-comment">← one JSON per module (Payout, Collection, Reports…)</span>
+│   └── merchant/dashboard/DashboardTestData.json
+│
+├── <span class="t-dir">fixtures/</span>
+│   ├── test-fixtures.js              <span class="t-comment">← custom Playwright `test` — injects the PageManager fixture</span>
+│   ├── sharedAuthedSuite.js           <span class="t-comment">← shared beforeAll/afterEach/afterAll, one page per suite</span>
+│   ├── mockFixtures.js                <span class="t-comment">← central registry — every mock JSON imported here once</span>
+│   └── dashboard/*.json               <span class="t-comment">← the actual fake API response bodies</span>
+│
+├── <span class="t-dir">test-cases/</span>
+│   ├── admin/
+│   │   ├── admin.setup.js            <span class="t-comment">← logs in ONCE, saves session to .auth/admin.json</span>
+│   │   └── &lt;feature&gt;/&lt;feature&gt;.spec.js  <span class="t-comment">← one spec file per module, 12 total</span>
+│   ├── merchant/                     <span class="t-comment">← paused, RUN_MERCHANT=true to resume</span>
+│   └── common/auth/login.spec.js, logout.spec.js
+│
+├── <span class="t-dir">.auth/</span>                            <span class="t-comment">← auto-created, saved browser sessions (gitignored)</span>
+├── <span class="t-dir">reports/</span>                           <span class="t-comment">← auto-created, HTML/JSON/JUnit/Allure reports</span>
+└── playwright.config.js              <span class="t-comment">← projects: admin-setup→admin, merchant-setup→merchant, chromium</span></pre>
+
+      <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin: 30px 0 12px;">Directory responsibilities, at a glance</h4>
+      <div class="detail-card glass-card" style="overflow-x: auto;">
+        <table style="width: 100%; border-collapse: collapse; font-size: 0.84rem;">
+          <tr style="border-bottom: 1px solid var(--glass-border);"><th style="text-align: left; padding: 8px 10px; color: var(--text-muted); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.5px;">Directory</th><th style="text-align: left; padding: 8px 10px; color: var(--text-muted); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.5px;">Holds</th><th style="text-align: left; padding: 8px 10px; color: var(--text-muted); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.5px;">How often you'll touch it</th></tr>
+          <tr style="border-bottom: 1px solid var(--glass-border);"><td style="padding: 9px 10px;"><code>locators/</code></td><td style="padding: 9px 10px; color: var(--text-secondary);">Every element selector, one JSON file</td><td style="padding: 9px 10px; color: var(--text-secondary);">Often — every new element</td></tr>
+          <tr style="border-bottom: 1px solid var(--glass-border);"><td style="padding: 9px 10px;"><code>test-data/</code></td><td style="padding: 9px 10px; color: var(--text-secondary);">Every expected value / test input, one JSON per feature</td><td style="padding: 9px 10px; color: var(--text-secondary);">Often — every new test</td></tr>
+          <tr style="border-bottom: 1px solid var(--glass-border);"><td style="padding: 9px 10px;"><code>pages/</code></td><td style="padding: 9px 10px; color: var(--text-secondary);">Page Object classes — the methods tests call</td><td style="padding: 9px 10px; color: var(--text-secondary);">Often — every new behavior</td></tr>
+          <tr style="border-bottom: 1px solid var(--glass-border);"><td style="padding: 9px 10px;"><code>test-cases/</code></td><td style="padding: 9px 10px; color: var(--text-secondary);">The actual <code>test(...)</code> files that wire it all together</td><td style="padding: 9px 10px; color: var(--text-secondary);">Often — every new test</td></tr>
+          <tr style="border-bottom: 1px solid var(--glass-border);"><td style="padding: 9px 10px;"><code>fixtures/</code></td><td style="padding: 9px 10px; color: var(--text-secondary);">Fake API response JSON + shared suite setup</td><td style="padding: 9px 10px; color: var(--text-secondary);">Occasionally — only when mocking is needed</td></tr>
+          <tr style="border-bottom: 1px solid var(--glass-border);"><td style="padding: 9px 10px;"><code>src/core/</code></td><td style="padding: 9px 10px; color: var(--text-secondary);">The 5-file engine room</td><td style="padding: 9px 10px; color: var(--text-secondary);">Rarely — build it once, reuse forever</td></tr>
+          <tr><td style="padding: 9px 10px;"><code>src/config/</code></td><td style="padding: 9px 10px; color: var(--text-secondary);">Environment variables, one-time global setup</td><td style="padding: 9px 10px; color: var(--text-secondary);">Rarely — only when adding a new config option</td></tr>
+        </table>
+      </div>
+
+      <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin: 30px 0 12px;">Hybrid vs. Plain POM — the exact same project, two ways</h4>
+      <p style="font-size: 0.86rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 16px;">If this were <strong style="color: var(--text-primary);">plain POM instead of Hybrid</strong>, two folders would disappear completely — their contents would move <em>inside</em> the very files that use them — and the mocking layer would vanish entirely, since mocking isn't part of POM at all.</p>
+      <div class="detail-content-grid" style="grid-template-columns: repeat(2, 1fr);">
+        <div>
+          <span class="chip-grid-label">Current — Hybrid</span>
+          <pre class="code-tree" style="font-size: 0.72rem;">paywize-automation/
+├── <span class="t-dir">locators/</span>
+│   └── PageSelectors.json      <span class="t-comment">← selectors live here</span>
+├── <span class="t-dir">test-data/</span>
+│   └── admin/payout/PayoutTestData.json
+├── <span class="t-dir">fixtures/</span>
+│   └── dashboard/*Mock.json    <span class="t-comment">← fake API bodies</span>
+├── <span class="t-dir">pages/</span>
+│   └── admin/payout/PayoutPage.js   <span class="t-comment">ZERO locators inside</span>
+└── <span class="t-dir">test-cases/</span>
+    └── admin/payout/payout.spec.js  <span class="t-comment">ZERO hardcoded values</span></pre>
+        </div>
+        <div>
+          <span class="chip-grid-label">Hypothetical — Plain POM</span>
+          <pre class="code-tree" style="font-size: 0.72rem;">paywize-automation/
+├── <span class="t-dir">pages/</span>
+│   └── admin/
+│       └── PayoutPage.js  <span class="t-comment">← locators now live HERE,</span>
+│                          <span class="t-comment">  as class fields</span>
+└── <span class="t-dir">test-cases/</span>
+    └── admin/payout/payout.spec.js
+                           <span class="t-comment">← expected URLs/amounts now</span>
+                           <span class="t-comment">  HARDCODED directly here</span>
+
+
+<span class="t-comment">(locators/, test-data/, and fixtures/*Mock.json</span>
+<span class="t-comment"> simply cease to exist — 3 folders gone)</span></pre>
+        </div>
+      </div>
+
+      <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin: 30px 0 12px;">Same real behavior, shown as actual code</h4>
+      <p style="font-size: 0.86rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 16px;">Real example — Payout's tab-click check (<code>PayoutPage.js</code> + <code>PageSelectors.json</code>):</p>
+      <div class="detail-content-grid" style="grid-template-columns: repeat(2, 1fr);">
+        <div>
+          <span class="chip-grid-label">Hybrid — Page Object never sees a raw selector</span>
+          <pre><code>// pages/admin/payout/PayoutPage.js
+async clickAndValidateUrl(clickSelectorKey, expectedUrlPart) {
+  await this.ensureSelectors();
+  await this.webUtil.waitAndClick(
+    this.selectors[clickSelectorKey]
+  );
+  await this.webUtil.assertUrlContains(expectedUrlPart);
+}</code></pre>
+          <pre><code>// locators/PageSelectors.json
+"payoutTab": "//div[@role='tablist']//div[
+  normalize-space()='Payout']"</code></pre>
+          <pre><code>// test-data/admin/payout/PayoutTestData.json
+"should update URL when clicking Payout tab": {
+  "expectedUrlPart": "tab=payout"
+}</code></pre>
+        </div>
+        <div>
+          <span class="chip-grid-label">Plain POM — same behavior, all inlined</span>
+          <pre><code>// pages/admin/PayoutPage.js
+class PayoutPage {
+  constructor(page) {
+    this.page = page;
+    this.payoutTab = page.locator(
+      "//div[@role='tablist']//div[" +
+      "normalize-space()='Payout']"
+    );
+  }
+  async clickPayoutTab() {
+    await this.payoutTab.click();
+  }
+}</code></pre>
+          <pre><code>// test-cases/admin/payout/payout.spec.js
+test('should update URL when clicking Payout tab',
+  async ({ page }) => {
+    const payoutPage = new PayoutPage(page);
+    await payoutPage.clickPayoutTab();
+    expect(page.url()).toContain('tab=payout');
+    // ← hardcoded, not loaded from JSON
+});</code></pre>
+        </div>
+      </div>
+      <p style="font-size: 0.84rem; color: var(--text-secondary); margin-top: 10px;">Functionally identical result either way. The difference is entirely <em>where the volatile stuff lives</em> — inside code (POM) or externalized to JSON (Hybrid).</p>
+
+      <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin: 30px 0 12px;">What each approach costs you when something changes</h4>
+      <div class="detail-card glass-card" style="overflow-x: auto;">
+        <table style="width: 100%; border-collapse: collapse; font-size: 0.84rem;">
+          <tr style="border-bottom: 1px solid var(--glass-border);"><th style="text-align: left; padding: 8px 10px; color: var(--text-muted); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.5px;">Change needed</th><th style="text-align: left; padding: 8px 10px; color: var(--text-muted); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.5px;">Plain POM</th><th style="text-align: left; padding: 8px 10px; color: var(--text-muted); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.5px;">Hybrid (this repo)</th></tr>
+          <tr style="border-bottom: 1px solid var(--glass-border);"><td style="padding: 9px 10px;">A selector breaks</td><td style="padding: 9px 10px; color: var(--text-secondary);">Open the class, edit code mixed with logic</td><td style="padding: 9px 10px; color: var(--text-secondary);">Edit one line in <code>PageSelectors.json</code></td></tr>
+          <tr style="border-bottom: 1px solid var(--glass-border);"><td style="padding: 9px 10px;">An expected value changes</td><td style="padding: 9px 10px; color: var(--text-secondary);">Edit the test file directly</td><td style="padding: 9px 10px; color: var(--text-secondary);">Edit one line in <code>test-data/</code></td></tr>
+          <tr style="border-bottom: 1px solid var(--glass-border);"><td style="padding: 9px 10px;">Need a predictable number to assert on</td><td style="padding: 9px 10px; color: var(--text-secondary);">Write ad-hoc interception inline, per test</td><td style="padding: 9px 10px; color: var(--text-secondary);">Add one fixture JSON + one <code>mockApiResponse()</code> call</td></tr>
+          <tr><td style="padding: 9px 10px;">Add a whole new page</td><td style="padding: 9px 10px; color: var(--text-secondary);">One big file: locators + logic + assertions together</td><td style="padding: 9px 10px; color: var(--text-secondary);">Split cleanly across 4 files, each with one job</td></tr>
+        </table>
+      </div>
+      <div class="risk-callout" style="margin-top: 20px;">
+        <h5>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          Plain POM Isn't Wrong
+        </h5>
+        <p>It's simpler to learn first, and plenty of real teams use it exactly as-is for smaller projects. Hybrid earns its extra folders specifically because Paywize is a live, evolving fintech product with multiple roles and 120+ test cases, not a toy app — see the 3 real-bug proofs above for why that trade paid off here.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MODULES BUILT ===== -->
+  <section class="detail-section alt-bg" id="modules">
+    <div class="container">
+      <h2 class="detail-section-heading reveal">All 12 Admin Modules, at a Glance</h2>
+      <p class="detail-lede reveal">Every module below has a real Page Object, real selectors, real test data, and real passing tests — not a placeholder.</p>
+      <div class="module-grid">
+        <div class="module-card reveal"><div class="module-card-top"><h4>Login / Auth</h4><span class="module-tag">@login</span></div><span class="module-count">4 tests</span><p>3 negative cases (wrong number, disabled account, invalid format) + 1 full real login with OTP.</p><span class="status-pill done">Built</span></div>
+        <div class="module-card reveal"><div class="module-card-top"><h4>Dashboard</h4><span class="module-tag">@dashboard</span></div><span class="module-count">5 tests</span><p>Overview row (Collection/Payout/Connected Banking/Revenue) validated against mocked API data, plus Merchant Onboarding count.</p><span class="status-pill done">Built</span></div>
+        <div class="module-card reveal"><div class="module-card-top"><h4>Merchants</h4><span class="module-tag">@merchants</span></div><span class="module-count">14 tests</span><p>7 stat cards — count validation + real click-to-filter correctness, no mocking. Found a real bug (see below).</p><span class="status-pill done">Built</span></div>
+        <div class="module-card reveal"><div class="module-card-top"><h4>Payout</h4><span class="module-tag">@payout</span></div><span class="module-count">13 tests</span><p>Bank filters, all 6 tabs + sub-navigation, Admin/Bank Wallet drill-down verified via real browser Back.</p><span class="status-pill done">Built</span></div>
+        <div class="module-card reveal"><div class="module-card-top"><h4>Connected Banking</h4><span class="module-tag">@connectedBanking</span></div><span class="module-count">13 tests</span><p>Payout/Collection tab switch, 8 Quick Link destinations, static Admin Fee/Credit cards.</p><span class="status-pill done">Built</span></div>
+        <div class="module-card reveal"><div class="module-card-top"><h4>Collection</h4><span class="module-tag">@collection</span></div><span class="module-count">4 tests</span><p>4 channels × 5 tabs (20 combinations) covered via one chained test per channel, URL-param driven.</p><span class="status-pill done">Built</span></div>
+        <div class="module-card reveal"><div class="module-card-top"><h4>Logs</h4><span class="module-tag">@logs</span></div><span class="module-count">6 tests</span><p>Live 46k+ row audit table — dynamic column-index search validation + full pagination, no hardcoded row counts.</p><span class="status-pill done">Built</span></div>
+        <div class="module-card reveal"><div class="module-card-top"><h4>Support</h4><span class="module-tag">@support</span></div><span class="module-count">13 tests</span><p>Dual search behavior (UID → all tickets, Ticket ID → exactly one), popup + profile drill-down, pagination.</p><span class="status-pill done">Built</span></div>
+        <div class="module-card reveal"><div class="module-card-top"><h4>Logout</h4><span class="module-tag">@logout</span></div><span class="module-count">2 + 2 skipped</span><p>Sidebar-confirm and profile-menu logout paths, Admin active; Merchant written, held for later.</p><span class="status-pill done">Built</span></div>
+        <div class="module-card reveal"><div class="module-card-top"><h4>Team Management</h4><span class="module-tag">@teamManagement</span></div><span class="module-count">6 tests</span><p>Roles page: Internal/External tabs, dual-column search, role drill-down. Members page deferred.</p><span class="status-pill partial">Partial</span></div>
+        <div class="module-card reveal"><div class="module-card-top"><h4>Settings</h4><span class="module-tag">@settings</span></div><span class="module-count">14 tests</span><p>IP Whitelist, tab switches, safe modal open/close. Services provider toggles deliberately deferred (live merchant-affecting action).</p><span class="status-pill partial">Safe scope</span></div>
+        <div class="module-card reveal"><div class="module-card-top"><h4>Reports</h4><span class="module-tag">@reports</span></div><span class="module-count">22 + 2 bug tests</span><p>Collection/Payout Summary+Downloads, Connected Banking search-accept, GST Statement. Found a real bug (see below).</p><span class="status-pill done">Built</span></div>
+      </div>
+      <p style="margin-top: 18px; font-size: 0.82rem; color: var(--text-secondary);"><span class="status-pill paused" style="margin-right: 8px;">Paused</span>Merchant role (Dashboard) is fully built but switched off — <code>RUN_MERCHANT=true</code> resumes it.</p>
+    </div>
+  </section>
+
+  <!-- ===== REAL BUGS FOUND ===== -->
+  <section class="detail-section" id="bugs">
+    <div class="container">
+      <h2 class="detail-section-heading reveal">2 Real Bugs Found in the Live Product</h2>
+      <p class="detail-lede reveal">Genuine defects in Paywize itself, reproduced consistently across multiple runs — not test flakiness, not framework issues. Both are kept <em>visible</em> in every test report rather than silently worked around.</p>
+      <div class="detail-content-grid" style="grid-template-columns: repeat(2, 1fr);">
+        <div class="bug-card reveal">
+          <div class="bug-head"><span class="bug-sev">Rendering Bug</span><span class="bug-module">Merchants module</span></div>
+          <h4>"New Request" filter under-renders its own labeled count</h4>
+          <p>Clicking the New Request stat card correctly updates the total count (622 → 290), and the pagination label still claims "Showing 1–10" — but only <strong>8 rows</strong> actually render in the DOM. All 8 rendered rows do show the correct status, so it's specifically a <strong>rendering</strong> bug, not a wrong-status filter bug. Reproduced across 3 separate runs.</p>
+        </div>
+        <div class="bug-card reveal">
+          <div class="bug-head"><span class="bug-sev">UI Inconsistency</span><span class="bug-module">Reports module</span></div>
+          <h4>GST Statement (Payout) is missing its "Showing X of Y" label</h4>
+          <p>Every other paginated table in the app shows a records-count label next to its pagination controls. GST Statement (Payout)'s CSB and SIB tabs render the pagination buttons but leave that label completely blank — reproduced on both tabs. Documented as two tests that <strong>intentionally fail</strong>, so it shows up red in every report until fixed.</p>
+        </div>
+      </div>
+      <div class="risk-callout" style="margin-top: 20px;">
+        <h5>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+          Why a 3-Way Check Mattered
+        </h5>
+        <p>The Merchants bug was first suspected to be a "wrong status" bug. A simple label-vs-status check couldn't tell "under-rendered" apart from "wrong data" — only checking <em>labeled count → actual DOM row count → matching-status count</em> together correctly pinpointed which failure class it really was.</p>
+      </div>
+
+      <h3 style="font-size: 1rem; font-weight: 700; color: var(--text-primary); margin: 30px 0 14px;">Also caught along the way (framework/assumption fixes, not product bugs)</h3>
+      <div class="chip-grid" style="grid-template-columns: repeat(2, 1fr);">
+        <div class="chip-item" style="align-items: flex-start;"><span class="chip-dot" style="margin-top: 5px;"></span><span style="font-weight: 400; font-size: 0.82rem; color: var(--text-secondary);"><strong style="color: var(--text-primary);">Wrong URL-slug guesses</strong> — Connected Banking's assumed <code>all-transactions</code>/<code>lien-management</code> were actually <code>transactions</code>/<code>lien</code>. Caught by the failing assertion printing the real URL.</span></div>
+        <div class="chip-item" style="align-items: flex-start;"><span class="chip-dot" style="margin-top: 5px;"></span><span style="font-weight: 400; font-size: 0.82rem; color: var(--text-secondary);"><strong style="color: var(--text-primary);">Account lockout, not a flake</strong> — a fixed-phone-number negative login test tripped the site's own anti-brute-force lockout after repeated runs. Fixed by accepting either error message as valid.</span></div>
+        <div class="chip-item" style="align-items: flex-start;"><span class="chip-dot" style="margin-top: 5px;"></span><span style="font-weight: 400; font-size: 0.82rem; color: var(--text-secondary);"><strong style="color: var(--text-primary);">Our own dashboard's count mismatch</strong> — the Visual QA Dashboard's reporter silently excluded the setup login step from its own totals, a 1-test gap vs. Playwright's report.</span></div>
+        <div class="chip-item" style="align-items: flex-start;"><span class="chip-dot" style="margin-top: 5px;"></span><span style="font-weight: 400; font-size: 0.82rem; color: var(--text-secondary);"><strong style="color: var(--text-primary);">Wrong tab-selector guess</strong> — Team Management's Internal/External tabs were guessed as buttons; they're actually the same tablist pattern every other module uses.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Q&A LIBRARY ===== -->
+  <section class="detail-section alt-bg" id="qa">
+    <div class="container">
+      <h2 class="detail-section-heading reveal">Q&amp;A Library</h2>
+      <p class="detail-lede reveal">Every question that's come up while building this, answered using this project's real code and real bugs — never a generic textbook example.</p>
+
+      <div class="qa-group-label">Framework Basics</div>
+      <details class="qa-item"><summary>What kind of framework is this, in one line?</summary><div class="qa-body"><p>A <strong style="color: var(--text-primary);">Hybrid Test Automation Framework</strong> — Page Object Model + Data-Driven Testing + API Mocking — built on Playwright with JavaScript, covering the Paywize admin (and paused merchant) dashboards.</p></div></details>
+      <details class="qa-item"><summary>If this were plain POM instead, what would actually change?</summary><div class="qa-body"><p>Two folders disappear entirely — <code>locators/</code> and <code>test-data/</code> — because their contents would move directly inside each Page Object class and each test file. The <code>fixtures/*Mock.json</code> API-mocking layer would also vanish, since mocking isn't part of POM at all. Same real behavior, just everything volatile moves from JSON back into code.</p></div></details>
+      <details class="qa-item"><summary>Of the three layers, which is safest to drop under time pressure?</summary><div class="qa-body"><p><strong style="color: var(--text-primary);">API Mocking.</strong> Merchants, Payout, and Connected Banking were all built with zero mocking and validate real end-to-end behavior (URL changes, real filter clicks) — that's exactly how the real Merchants bug and the Connected Banking URL mistakes were caught. Mocking only matters when you need one exact, stable number to assert against. POM and Data-Driven are load-bearing for every test; dropping either makes the whole thing harder to maintain immediately.</p></div></details>
+      <details class="qa-item"><summary>What does the folder structure look like, and why?</summary><div class="qa-body"><p><code>pages/</code> = what you edit most (Page Objects) · <code>locators/</code> = every selector, centralized · <code>test-data/</code> = every expected value, centralized · <code>fixtures/</code> = mocks + shared setup · <code>test-cases/</code> = the actual test files · <code>src/core/</code> = framework internals, rarely touched. The idea: add a new test by editing 2–3 JSON/JS files, never opening <code>src/core/</code>.</p></div></details>
+
+      <div class="qa-group-label">Running Tests</div>
+      <details class="qa-item"><summary>How do I run everything, headless vs. headed?</summary><div class="qa-body"><pre><code>npx playwright test              # headless (default, fastest)
+npx playwright test --headed     # headed — watch the browser</code></pre></div></details>
+      <details class="qa-item"><summary>How do I run just a specific set of modules — e.g. only Dashboard, Payout, and Connected Banking?</summary><div class="qa-body"><p>Every module carries a tag. Join tags with <code>|</code> (regex OR) in <code>--grep</code>:</p><pre><code>npx playwright test --project=admin-setup --project=admin \
+  --grep "@dashboard|@payout|@connectedBanking"</code></pre></div></details>
+      <details class="qa-item"><summary>Is parallel execution possible? How many workers can I use?</summary><div class="qa-body"><p>Yes — <code>fullyParallel: true</code> is set, but the actual concurrency is controlled by <code>workers</code> (<code>src/config/Config.js</code>, override with <code>WORKERS=&lt;n&gt;</code>). Parallelism happens <strong style="color: var(--text-primary);">per spec file</strong>, not per test — tests inside one file share a page and always run in order. There's no hard cap, but pushing workers too high is bounded by your own machine, not the framework: testing at <code>WORKERS=6</code> on an 8-core/16GB machine already under memory pressure caused the very first login to time out. Settled on <code>workers: 1</code> (sequential) as the safe default; override deliberately when you actually want a parallel or load test.</p></div></details>
+      <details class="qa-item"><summary>If a test fails, how do I find out why?</summary><div class="qa-body"><p>In order: read the console output (every action logs what it did) → check the auto-saved failure screenshot → open the HTML report (<code>npx playwright show-report</code>) → re-run with <code>--headed</code> to watch it live → open a saved trace (<code>npx playwright show-trace</code>) for a full scrubbable timeline.</p></div></details>
+
+      <div class="qa-group-label">Regression Testing Terminology</div>
+      <details class="qa-item"><summary>What's the difference between Retesting, Partial Regression, Sanity, and Full Regression?</summary><div class="qa-body">
+        <p><strong style="color: var(--text-primary);">Retesting</strong> — confirming the exact reported defect is fixed. Example: Connected Banking's URL was assumed <code>all-transactions</code>, really <code>transactions</code> — retesting is re-running that one "click, verify URL" scenario after the fix.</p>
+        <p><strong style="color: var(--text-primary);">Partial Regression</strong> — re-checking the surrounding area of that same module. After fixing that one link, it means re-checking the rest of Connected Banking's Quick Links and cards, since they share the same page/component.</p>
+        <p><strong style="color: var(--text-primary);">Sanity Testing</strong> — a quick, shallow pass across major flows right after a new deploy, to decide if it's stable enough for deeper testing. About depth, not size — e.g. a fast pass through Login → Dashboard → Payout → Connected Banking, not the full suite.</p>
+        <p><strong style="color: var(--text-primary);">Full Regression</strong> — re-running the <em>entire</em> suite across the whole app. Reserved for major releases or architecturally significant changes (an auth rework, a shared component upgrade) — not just because one module happens to be large.</p>
+      </div></details>
+
+      <div class="qa-group-label">Career / Interview Prep</div>
+      <details class="qa-item"><summary>How would you describe this experience in an interview?</summary><div class="qa-body"><p>"I work on UI test automation — end-to-end functional and regression testing for a fintech admin/merchant dashboard, using Playwright with JavaScript. I built and maintain a Hybrid automation framework combining Page Object Model, data-driven testing, and API mocking — covering authentication (including OTP), dashboard data validation against mocked responses, and navigation testing across multiple roles. I also worked on the framework itself: structuring the codebase, externalizing locators/test data into JSON, and setting up CI reporting."</p><p><strong style="color: var(--text-primary);">Honest boundary to know:</strong> this doesn't cover performance/load testing, visual regression, or accessibility testing — worth knowing where the line is rather than overstating it.</p></div></details>
+    </div>
+  </section>
+
+  <!-- ===== DELIVERY & PROGRESS ===== -->
+  <section class="detail-section" id="progress">
+    <div class="container">
+      <h2 class="detail-section-heading reveal">Delivery Status &amp; Progress Log</h2>
+
+      <div class="scorebar-card reveal">
+        <div class="scorebar-top">
+          <span class="scorebar-score">~75<span>/100</span></span>
+          <span class="scorebar-label">Scope-completeness vs. the plan shared with management</span>
+        </div>
+        <div class="scorebar-track"><div class="scorebar-fill" style="width: 75%;"></div></div>
+        <p style="font-size: 0.82rem; color: var(--text-secondary); margin-top: 14px; margin-bottom: 0;">All 12 planned modules are built. The remaining gap: chaining one of the 3 named end-to-end regression flows into a single continuous test, and completing a real Smoke/Sanity tag split.</p>
+      </div>
+
+      <div class="detail-content-grid" style="grid-template-columns: repeat(3, 1fr); margin-bottom: 32px;">
+        <div class="detail-card glass-card reveal"><p style="margin: 0; font-size: 0.84rem; color: var(--text-secondary);"><strong style="color: var(--domain-accent);">✓ Framework setup</strong><br>Base classes, config, auth, navigation patterns — proven across all 12 modules.</p></div>
+        <div class="detail-card glass-card reveal"><p style="margin: 0; font-size: 0.84rem; color: var(--text-secondary);"><strong style="color: #eab308;">△ 3 named E2E flows</strong><br>Full per-module coverage exists; not yet chained into single continuous journeys.</p></div>
+        <div class="detail-card glass-card reveal"><p style="margin: 0; font-size: 0.84rem; color: var(--text-secondary);"><strong style="color: #eab308;">△ Smoke/Sanity split</strong><br>Reporting is fully automated; tag-based suite split is only partial so far.</p></div>
+      </div>
+
+      <h3 style="font-size: 1rem; font-weight: 700; color: var(--text-primary); margin-bottom: 16px;">Progress log</h3>
+      <div class="progress-timeline">
+        <div class="tl-entry reveal"><div class="tl-date">2026-07-17</div><h4>Reports module built — all 12 modules complete</h4><p>22 real tests + 2 intentional bug-documentation tests. 4 real cross-module inconsistencies found and fixed via live DOM checks. Parallel execution investigated and settled on sequential-by-default. Full suite: 120 tests, 119 passing.</p></div>
+        <div class="tl-entry reveal"><div class="tl-date">2026-07-16</div><h4>Demo day — Logout, Support, Team Management built; Visual QA Dashboard redesigned</h4><p>All three built and passing before a 4pm management demo. Management responded positively, asked for a July 24 launch + JIRA integration (both still unscoped).</p></div>
+        <div class="tl-entry reveal"><div class="tl-date">2026-07-15</div><h4>Logs module built; cross-browser support added</h4><p>Live 46k+ row audit table automated via dynamic column lookup. Chromium/Firefox/WebKit switching added; a latent browser-config bug fixed.</p></div>
+        <div class="tl-entry reveal"><div class="tl-date">2026-07-14</div><h4>Merchants, Payout, Connected Banking, Collection built</h4><p>Four modules in one day. Found the real Merchants pagination bug and two wrong URL-slug assumptions (self-corrected).</p></div>
+        <div class="tl-entry reveal"><div class="tl-date">2026-07-10</div><h4>Framework foundation + Login/Auth</h4><p>Core engine simplified and stabilized; Login/Auth built with full OTP flow + 3 negative cases.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== QUICK REFERENCE ===== -->
+  <section class="detail-section alt-bg" id="reference">
+    <div class="container">
+      <h2 class="detail-section-heading reveal">Quick Reference</h2>
+      <div class="detail-content-grid" style="grid-template-columns: repeat(2, 1fr);">
+        <div class="detail-card glass-card reveal">
+          <h4 style="font-size: 0.9rem; margin-bottom: 12px;">Most-used commands</h4>
+          <pre><code>npx playwright test                       # everything, headless
+npx playwright test --headed              # everything, headed
+npx playwright test --grep "@payout"      # one module
+npx playwright show-report reports/playwright-html-report</code></pre>
+        </div>
+        <div class="detail-card glass-card reveal">
+          <h4 style="font-size: 0.9rem; margin-bottom: 12px;">Key rules, no exceptions</h4>
+          <ul class="detail-highlights" style="margin: 0;">
+            <li>Selectors → <code>locators/PageSelectors.json</code> only</li>
+            <li>Expected values → <code>test-data/</code> JSON only</li>
+            <li><code>await this.ensureSelectors()</code> first line, every method</li>
+            <li>Mock <em>before</em> the reload that triggers the API call</li>
+            <li>Negative tests always run before positive ones</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER CTA ===== -->
+  <section class="detail-section" style="padding-top: 0;">
+    <div class="container">
+      <div class="detail-footer-cta">
+        <a href="https://github.com/ghanendra-sdet/Playwright-Starter-Framework" target="_blank" rel="noopener noreferrer" class="btn-domain">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.09 3.29 9.4 7.86 10.93.57.1.78-.25.78-.55v-1.94c-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.68-1.28-1.68-1.04-.72.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.75 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.05 11.05 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.24 2.76.12 3.05.74.81 1.18 1.83 1.18 3.09 0 4.41-2.69 5.39-5.25 5.67.41.36.78 1.07.78 2.15v3.19c0 .3.21.66.79.55A10.51 10.51 0 0 0 23.5 12c0-6.35-5.15-11.5-11.5-11.5z"/></svg>
+          View Full Repository
+        </a>
+        <a href="../projects/fintech-collection-engine/" class="next-project-link glass-card">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          <span>
+            <span class="next-project-label">See It In Action</span>
+            <span class="next-project-name">Fintech Collection Engine Case Study</span>
+          </span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <span class="logo-bracket">&lt;</span>GY<span class="logo-bracket"> /&gt;</span>
+        </div>
+        <p class="footer-text">Designed &amp; Built by <strong>Ghanendra Yadav</strong> | QA Automation Engineer</p>
+        <div class="footer-socials">
+          <a href="mailto:ghanendrablr@gmail.com" class="footer-social" aria-label="Email">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </a>
+          <a href="https://linkedin.com/in/ghanendra-yadav" target="_blank" rel="noopener noreferrer" class="footer-social" aria-label="LinkedIn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="tel:+917999697219" class="footer-social" aria-label="Phone">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </a>
+        </div>
+        <p class="footer-copyright">&copy; 2026 Ghanendra Yadav. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <script src="../script.js?v=2"></script>
+</body>
+</html>
