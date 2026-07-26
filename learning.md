@@ -20,9 +20,30 @@
 - [ ] **Contact form is fake.** `script.js` — `initContactForm()` is explicitly commented
       "Visual Only." It shows a fake "message sent successfully" confirmation but never actually
       sends anything anywhere. A real visitor filling it out believes they reached you and won't.
-      Fix options: wire it to a real form backend (Formspree, EmailJS, a simple serverless
-      function), or replace it with a plain `mailto:` link until it's wired up — never leave a
-      fake success state live.
+      This is a static site (GitHub Pages, no backend) — the form has to hand off to a third-party
+      service to actually deliver anywhere. Options, decided 2026-07-27, easiest first:
+
+      1. **Formspree (recommended)** — least setup. Create a free account at formspree.io, create
+         one form, get an endpoint URL (`https://formspree.io/f/xxxxxxx`). Point the `<form>`'s
+         `action` at it, add `name` attributes to each input, submit via `fetch()` so the existing
+         "Message Sent!" animation only shows after Formspree actually confirms. Free tier: 50
+         submissions/month, no secrets exposed, no deploy step, works from GitHub Pages as-is.
+      2. **EmailJS** — a bit more setup, more control over the email's format. Free account at
+         emailjs.com, connect a real mailbox (Gmail/Outlook) via OAuth, build an email template,
+         get a Public Key + Service ID + Template ID, add the EmailJS script + a few lines of JS.
+         Free tier: 200 emails/month. Same GitHub Pages compatibility, no backend.
+      3. **A real backend function** (Cloudflare Worker / Vercel Function + an email API like
+         Resend) — most control and most secure (no third party ever sees the message), but real
+         engineering: a cloud account, deploying a function, CORS setup, a server-side API key.
+         Only worth it if you want to own the whole pipeline — overkill for a portfolio form.
+      4. **Plain `mailto:` link** — zero setup, works today as a stopgap. Not really "a form" —
+         clicking Send opens the visitor's own email client pre-filled with their message. Less
+         polished and depends on them having an email client configured, but it's honest in the
+         meantime rather than showing a fake success state.
+
+      Decision: start with Formspree (~5 min of account setup on Ghanendra's end, code side done
+      by Claude) — and do it around the same time as actually deploying the site, since a working
+      form on a site nobody can reach doesn't help much (see the "site isn't live" item above).
 - [ ] **"View on GitHub" 404s on every Paywize case study.** `Playwright-Starter-Framework` repo
       is private but linked from the Automation page and all 7 Paywize project heroes as if
       public. Either make that repo public (review it for anything sensitive first) or remove/
