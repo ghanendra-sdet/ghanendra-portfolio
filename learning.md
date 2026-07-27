@@ -116,6 +116,11 @@ only.
   renders the raw number or a `tel:` link — replaced with "Available on request — message via the
   form or email above." Removed the phone icon from the footer socials entirely (kept email +
   LinkedIn). No JS depended on the old `tel:` elements, confirmed via grep before removing.
+  **Correction, 2026-07-27:** the original fix only touched `index.html` — the footer `tel:` link
+  and phone icon were still live on all 11 project pages plus `automation/index.html`. Found via
+  a repo-wide grep while building the new Resources page, fixed everywhere with a script, and
+  re-verified with a second grep returning zero matches. Lesson: a "fix everywhere" claim needs a
+  repo-wide grep to actually confirm, not just a check of the one file being edited at the time.
 - **2026-07-26 — Resume vs. site checked.** See the "New finding" section above — real structural
   gap found (7 site case studies vs. 2 resume-listed Paywize projects, no "QA Lead" title or "5+
   team members" figure on the resume). Reported, not silently resolved — needs your decision on
