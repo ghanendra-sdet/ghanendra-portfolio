@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Every live, open-source project Ghanendra Yadav has built and shipped — learning platforms, an automation playground, and 11 QA project case studies — in one place.">
+  <meta name="keywords" content="QA Engineer, SDET, Live Demo, GitHub Pages, Test Automation, Playwright, Free Course, Open Source, Project Central">
+  <meta name="author" content="Ghanendra Yadav">
+  <title>Live Projects Hub | Ghanendra Yadav — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"></noscript>
+  <link rel="stylesheet" href="../style.css?v=16">
+  <style>
+    .project-card-ctas { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+    .project-card-ctas .project-card-cta { margin-top: 0; }
+    .project-card-cta-live {
+      color: #10b981;
+      border-color: rgba(16, 185, 129, 0.35);
+    }
+    .project-card-cta-live:hover,
+    .project-card-cta-live:focus-visible {
+      background: linear-gradient(135deg, #10b981, #14b8a6);
+      color: #fff;
+      border-color: transparent;
+    }
+    .live-pulse-dot {
+      display: inline-block;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #10b981;
+      margin-right: 7px;
+      box-shadow: 0 0 0 rgba(16, 185, 129, 0.6);
+      animation: live-pulse 2s infinite;
+    }
+    @keyframes live-pulse {
+      0%   { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.55); }
+      70%  { box-shadow: 0 0 0 8px rgba(16, 185, 129, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+    }
+    .case-study-chip-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 10px;
+      margin-top: 24px;
+    }
+    .case-study-chip {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 12px 16px;
+      border-radius: 12px;
+      border: 1px solid var(--glass-border);
+      background: var(--glass-bg);
+      color: var(--text-secondary);
+      font-size: 0.85rem;
+      font-weight: 600;
+      transition: border-color var(--transition-smooth), color var(--transition-smooth), transform var(--transition-smooth);
+    }
+    .case-study-chip:hover {
+      border-color: var(--domain-accent, var(--accent-blue));
+      color: var(--text-primary);
+      transform: translateY(-2px);
+    }
+    .case-study-chip svg { width: 14px; height: 14px; flex-shrink: 0; opacity: 0.7; }
+  </style>
+</head>
+<body class="domain-automation">
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('theme');
+      const systemPrefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+      if (savedTheme === 'light' || (!savedTheme && systemPrefersLight)) {
+        document.body.classList.add('light-mode');
+      }
+    })();
+  </script>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav id="navbar" class="navbar">
+    <div class="nav-container">
+      <a href="../index.html#hero" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>GY<span class="logo-bracket"> /&gt;</span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="../index.html#about" class="nav-link">About</a></li>
+        <li><a href="../index.html#skills" class="nav-link">Skills</a></li>
+        <li><a href="../index.html#experience" class="nav-link">Experience</a></li>
+        <li><a href="../index.html#projects" class="nav-link">Projects</a></li>
+        <li><a href="../index.html#resources" class="nav-link">Resources</a></li>
+        <li><a href="../live-projects/" class="nav-link active">Live Projects</a></li>
+        <li><a href="../index.html#education" class="nav-link">Education</a></li>
+        <li><a href="../index.html#awards" class="nav-link">Awards</a></li>
+        <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle light/dark mode" title="Toggle theme">
+          <svg class="theme-icon sun-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
+          <svg class="theme-icon moon-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+          <span class="hamburger-line"></span><span class="hamburger-line"></span><span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== BACK LINK ===== -->
+  <div class="detail-backlink-wrap">
+    <div class="container">
+      <a href="../index.html#projects" class="detail-backlink reveal">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+        Back to Portfolio
+      </a>
+    </div>
+  </div>
+
+  <!-- ===== HERO ===== -->
+  <header class="project-detail-hero domain-automation">
+    <div class="container">
+      <div class="detail-hero-icon reveal">
+        <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+      </div>
+      <span class="detail-domain-label reveal">The Full Pack</span>
+      <h1 class="detail-title reveal">Live Projects Hub</h1>
+      <p class="detail-tagline reveal">Every live, working site I've built — free courses, an automation playground, and the QA case-study hub — collected in one place. Nothing here is a mockup or a "coming soon": click a link, it opens, it works.</p>
+      <div class="detail-meta-row reveal">
+        <span class="meta-chip">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+          7 Live Sites
+        </span>
+        <span class="meta-chip">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          11 Project Case Studies
+        </span>
+        <span class="meta-chip meta-chip-strong">
+          <span class="live-pulse-dot"></span>
+          100% Free, No Signup
+        </span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== LEARNING PLATFORMS ===== -->
+  <section class="detail-section" id="learning-platforms">
+    <div class="container">
+      <h2 class="detail-section-heading reveal">🎓 Free Learning Platforms</h2>
+      <p class="detail-lede reveal">Six complete, interactive study apps — not static READMEs. Each has a working dashboard: search, progress tracking, dark mode, and content built from real automation and QA work, not textbook filler.</p>
+
+      <div class="projects-grid" style="margin-top: 32px;">
+
+        <div class="project-card glass-card reveal">
+          <div class="project-icon">
+            <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg>
+          </div>
+          <h3 class="project-name">SDET Roadmap</h3>
+          <span class="project-client">Interactive Dashboard · 11 Modules · Beginner → Advanced</span>
+          <p class="project-desc">The complete QA-to-SDET path: manual testing fundamentals, API testing, Playwright UI &amp; API automation, real framework design, CI/CD, and a dedicated AI-Assisted Testing module. Progress tracking and full-text search built in.</p>
+          <div class="project-tags">
+            <span class="tech-tag">Playwright</span>
+            <span class="tech-tag">TypeScript</span>
+            <span class="tech-tag">CI/CD</span>
+            <span class="tech-tag">AI Testing</span>
+          </div>
+          <div class="project-card-ctas">
+            <a href="https://ghanendra-sdet.github.io/sdet-roadmap/" target="_blank" rel="noopener noreferrer" class="project-card-cta project-card-cta-live">
+              <span class="live-pulse-dot"></span>Open Live Site
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+            <a href="https://github.com/ghanendra-sdet/sdet-roadmap" target="_blank" rel="noopener noreferrer" class="project-card-cta">
+              View Repository
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="project-card glass-card reveal">
+          <div class="project-icon">
+            <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="18" r="3"/><circle cx="6" cy="6" r="3"/><path d="M13 6h3a2 2 0 0 1 2 2v7"/><path d="M11 18H8a2 2 0 0 1-2-2V9"/></svg>
+          </div>
+          <h3 class="project-name">GIT Tutorials</h3>
+          <span class="project-client">Interactive Dashboard · 8 Modules · Beginner → Advanced</span>
+          <p class="project-desc">A from-scratch Git + GitHub course with a real-life analogy for every concept — staging area as the box you're packing, branches as parallel timelines — through rebase, reflog, hooks, and CI/CD.</p>
+          <div class="project-tags">
+            <span class="tech-tag">Git</span>
+            <span class="tech-tag">GitHub</span>
+            <span class="tech-tag">CI/CD</span>
+            <span class="tech-tag">Version Control</span>
+          </div>
+          <div class="project-card-ctas">
+            <a href="https://ghanendra-sdet.github.io/git-tutorials/" target="_blank" rel="noopener noreferrer" class="project-card-cta project-card-cta-live">
+              <span class="live-pulse-dot"></span>Open Live Site
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+            <a href="https://github.com/ghanendra-sdet/git-tutorials" target="_blank" rel="noopener noreferrer" class="project-card-cta">
+              View Repository
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="project-card glass-card reveal">
+          <div class="project-icon">
+            <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4Z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+          </div>
+          <h3 class="project-name">Java Roadmap</h3>
+          <span class="project-client">Interactive Dashboard · 1,080+ Problems · 12 Sections</span>
+          <p class="project-desc">A full Java practice bootcamp — fundamentals through modern Java 8+/Streams/multithreading — with a built-in code editor, difficulty/topic filters, and a 350-problem "write your own" practice bank layered on top.</p>
+          <div class="project-tags">
+            <span class="tech-tag">Java</span>
+            <span class="tech-tag">DSA</span>
+            <span class="tech-tag">OOP</span>
+            <span class="tech-tag">Interview Prep</span>
+          </div>
+          <div class="project-card-ctas">
+            <a href="https://ghanendra-sdet.github.io/java-roadmap/" target="_blank" rel="noopener noreferrer" class="project-card-cta project-card-cta-live">
+              <span class="live-pulse-dot"></span>Open Live Site
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+            <a href="https://github.com/ghanendra-sdet/java-roadmap" target="_blank" rel="noopener noreferrer" class="project-card-cta">
+              View Repository
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="project-card glass-card reveal">
+          <div class="project-icon">
+            <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+          </div>
+          <h3 class="project-name">Manual Testing Playbook</h3>
+          <span class="project-client">Interactive Dashboard · 12 Modules + Cheat Sheet</span>
+          <p class="project-desc">A complete manual QA study guide, but every example is grounded in real scenarios from my own fintech/healthcare/travel project case studies — real defects, real regression checklists, real execution reports — not generic textbook bugs. Includes a side-by-side Testing Types Comparison Guide.</p>
+          <div class="project-tags">
+            <span class="tech-tag">Manual Testing</span>
+            <span class="tech-tag">STLC</span>
+            <span class="tech-tag">Defect Lifecycle</span>
+            <span class="tech-tag">JIRA</span>
+          </div>
+          <div class="project-card-ctas">
+            <a href="https://ghanendra-sdet.github.io/manual-testing-playbook/" target="_blank" rel="noopener noreferrer" class="project-card-cta project-card-cta-live">
+              <span class="live-pulse-dot"></span>Open Live Site
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+            <a href="https://github.com/ghanendra-sdet/manual-testing-playbook" target="_blank" rel="noopener noreferrer" class="project-card-cta">
+              View Repository
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="project-card glass-card reveal">
+          <div class="project-icon">
+            <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+          </div>
+          <h3 class="project-name">Automation Playground</h3>
+          <span class="project-client">41 Live Sections · Forms, Tables, Alerts, Shadow DOM &amp; More</span>
+          <p class="project-desc">A free practice sandbox for anyone learning UI automation — forms, dynamic tables, alerts, modals, iframes, shadow DOM, drag &amp; drop, deliberately flaky elements — built to be scraped, clicked, and automated against, dark/light mode included.</p>
+          <div class="project-tags">
+            <span class="tech-tag">Playwright</span>
+            <span class="tech-tag">Selenium</span>
+            <span class="tech-tag">UI Automation</span>
+            <span class="tech-tag">Practice Sandbox</span>
+          </div>
+          <div class="project-card-ctas">
+            <a href="https://ghanendra-sdet.github.io/automation-playground/" target="_blank" rel="noopener noreferrer" class="project-card-cta project-card-cta-live">
+              <span class="live-pulse-dot"></span>Open Live Site
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+            <a href="https://github.com/ghanendra-sdet/automation-playground" target="_blank" rel="noopener noreferrer" class="project-card-cta">
+              View Repository
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="project-card glass-card reveal">
+          <div class="project-icon">
+            <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          </div>
+          <h3 class="project-name">90-Day Playwright Master Plan</h3>
+          <span class="project-client">Interactive Tracker · Day-by-Day Study Planner</span>
+          <p class="project-desc">A checkbox-driven daily planner for going from Playwright basics to a full hybrid framework — the same roadmap SDET Roadmap teaches, broken down into a day-by-day study calendar you can actually check off.</p>
+          <div class="project-tags">
+            <span class="tech-tag">Playwright</span>
+            <span class="tech-tag">Study Planner</span>
+            <span class="tech-tag">Progress Tracking</span>
+          </div>
+          <div class="project-card-ctas">
+            <a href="https://ghanendra-sdet.github.io/60-Days-Master-Plan-for-Playwright/" target="_blank" rel="noopener noreferrer" class="project-card-cta project-card-cta-live">
+              <span class="live-pulse-dot"></span>Open Live Site
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+            <a href="https://github.com/ghanendra-sdet/60-Days-Master-Plan-for-Playwright" target="_blank" rel="noopener noreferrer" class="project-card-cta">
+              View Repository
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECT CENTRAL / CASE STUDIES ===== -->
+  <section class="detail-section alt-bg" id="project-central">
+    <div class="container">
+      <h2 class="detail-section-heading reveal">💼 Project Central — The QA Case-Study Hub</h2>
+      <p class="detail-lede reveal">Eleven real-feeling fintech, healthcare, travel, HR, and ed-tech products, each documented like an actual QA engagement — business flow, regression checklist, sample defects, automation approach, and (where relevant) load-test results. Project Central is the live index that ties all eleven together.</p>
+
+      <div class="projects-grid" style="margin-top: 32px;">
+        <div class="project-card glass-card reveal">
+          <div class="project-icon">
+            <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+          </div>
+          <h3 class="project-name">Project Central</h3>
+          <span class="project-client">Live Index · 11 Linked Case Studies</span>
+          <p class="project-desc">The umbrella hub for every project below — one page linking out to all eleven repos, each with its own README, regression checklist, and worked defect reports.</p>
+          <div class="project-tags">
+            <span class="tech-tag">Fintech</span>
+            <span class="tech-tag">Healthcare</span>
+            <span class="tech-tag">Travel</span>
+            <span class="tech-tag">HR / EdTech</span>
+          </div>
+          <div class="project-card-ctas">
+            <a href="https://ghanendra-sdet.github.io/project-central/" target="_blank" rel="noopener noreferrer" class="project-card-cta project-card-cta-live">
+              <span class="live-pulse-dot"></span>Open Live Site
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+            <a href="https://github.com/ghanendra-sdet/project-central" target="_blank" rel="noopener noreferrer" class="project-card-cta">
+              View Repository
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <h3 style="margin-top: 48px; font-size: 1.05rem; font-weight: 700; color: var(--text-primary);" class="reveal">The 11 case studies, direct links:</h3>
+      <div class="case-study-chip-grid">
+        <a href="https://github.com/ghanendra-sdet/fintech-collection-engine" target="_blank" rel="noopener noreferrer" class="case-study-chip reveal">
+          💰 Fintech Collection Engine
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+        </a>
+        <a href="https://github.com/ghanendra-sdet/fintech-payout-engine" target="_blank" rel="noopener noreferrer" class="case-study-chip reveal">
+          💸 Fintech Payout Engine
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+        </a>
+        <a href="https://github.com/ghanendra-sdet/fintech-connected-banking-platform" target="_blank" rel="noopener noreferrer" class="case-study-chip reveal">
+          🏦 Connected Banking Platform
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+        </a>
+        <a href="https://github.com/ghanendra-sdet/bbps-bill-payment-platform" target="_blank" rel="noopener noreferrer" class="case-study-chip reveal">
+          🧾 BBPS Bill Payment Platform
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+        </a>
+        <a href="https://github.com/ghanendra-sdet/reseller-management-platform" target="_blank" rel="noopener noreferrer" class="case-study-chip reveal">
+          🤝 Reseller Management Platform
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+        </a>
+        <a href="https://github.com/ghanendra-sdet/healthcare-insurance-platform" target="_blank" rel="noopener noreferrer" class="case-study-chip reveal">
+          🏥 Healthcare Insurance Platform
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+        </a>
+        <a href="https://github.com/ghanendra-sdet/travel-marketplace-platform" target="_blank" rel="noopener noreferrer" class="case-study-chip reveal">
+          ✈️ Travel Marketplace Platform
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+        </a>
+        <a href="https://github.com/ghanendra-sdet/hrms-platform" target="_blank" rel="noopener noreferrer" class="case-study-chip reveal">
+          👥 HRMS Platform
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+        </a>
+        <a href="https://github.com/ghanendra-sdet/lms-platform" target="_blank" rel="noopener noreferrer" class="case-study-chip reveal">
+          🎓 LMS Platform
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+        </a>
+        <a href="https://github.com/ghanendra-sdet/yobo" target="_blank" rel="noopener noreferrer" class="case-study-chip reveal">
+          🏛️ YOBO — Account Aggregator
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+        </a>
+        <a href="https://github.com/ghanendra-sdet/ai-dispute-resolution-engine" target="_blank" rel="noopener noreferrer" class="case-study-chip reveal">
+          🤖 AI Dispute Resolution Engine
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+        </a>
+      </div>
+
+      <div class="risk-callout" style="margin-top: 32px;">
+        <h5>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+          Want the Full Write-Up Instead of Just the Repo?
+        </h5>
+        <p>Every one of these 11 also has a detailed case-study page right here in this portfolio — role, tech stack, business flow, key achievements, and screenshots. <a href="../index.html#projects">Browse the full case studies →</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER CTA ===== -->
+  <section class="detail-section" style="padding-top: 0;">
+    <div class="container">
+      <div class="detail-footer-cta">
+        <a href="../resources/" class="next-project-link glass-card">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          <span>
+            <span class="next-project-label">Prefer the short list?</span>
+            <span class="next-project-name">See the Free Resources Page</span>
+          </span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <span class="logo-bracket">&lt;</span>GY<span class="logo-bracket"> /&gt;</span>
+        </div>
+        <p class="footer-text">Designed &amp; Built by <strong>Ghanendra Yadav</strong> | QA Automation Engineer</p>
+        <div class="footer-socials">
+          <a href="mailto:ghanendrablr@gmail.com" class="footer-social" aria-label="Email">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </a>
+          <a href="https://linkedin.com/in/ghanendra-yadav" target="_blank" rel="noopener noreferrer" class="footer-social" aria-label="LinkedIn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+        </div>
+        <p class="footer-copyright">&copy; 2026 Ghanendra Yadav. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <script src="../script.js?v=2"></script>
+</body>
+</html>
