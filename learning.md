@@ -44,7 +44,7 @@
       Decision: start with Formspree (~5 min of account setup on Ghanendra's end, code side done
       by Claude) — and do it around the same time as actually deploying the site, since a working
       form on a site nobody can reach doesn't help much (see the "site isn't live" item above).
-- [ ] **"View on GitHub" 404s on every Paywize case study.** `Playwright-Starter-Framework` repo
+- [ ] **"View on GitHub" 404s on every Paywize case study.** `playwright-starter-framework` repo
       is private but linked from the Automation page and all 7 Paywize project heroes as if
       public. Either make that repo public (review it for anything sensitive first) or remove/
       relabel the links until it is.
