@@ -1,63 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://ghanendra-sdet.github.io/</loc>
+    <loc>https://ghanendra-sdet.github.io/ghanendra-portfolio/</loc>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://ghanendra-sdet.github.io/resources/</loc>
+    <loc>https://ghanendra-sdet.github.io/ghanendra-portfolio/resources/</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://ghanendra-sdet.github.io/automation/</loc>
+    <loc>https://ghanendra-sdet.github.io/ghanendra-portfolio/automation/</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://ghanendra-sdet.github.io/live-projects/</loc>
+    <loc>https://ghanendra-sdet.github.io/ghanendra-portfolio/live-projects/</loc>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://ghanendra-sdet.github.io/projects/fintech-collection-engine/</loc>
+    <loc>https://ghanendra-sdet.github.io/ghanendra-portfolio/projects/fintech-collection-engine/</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://ghanendra-sdet.github.io/projects/fintech-payout-engine/</loc>
+    <loc>https://ghanendra-sdet.github.io/ghanendra-portfolio/projects/fintech-payout-engine/</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://ghanendra-sdet.github.io/projects/fintech-connected-banking/</loc>
+    <loc>https://ghanendra-sdet.github.io/ghanendra-portfolio/projects/fintech-connected-banking/</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://ghanendra-sdet.github.io/projects/bbps-bill-payment/</loc>
+    <loc>https://ghanendra-sdet.github.io/ghanendra-portfolio/projects/bbps-bill-payment/</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://ghanendra-sdet.github.io/projects/reseller-management/</loc>
+    <loc>https://ghanendra-sdet.github.io/ghanendra-portfolio/projects/reseller-management/</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://ghanendra-sdet.github.io/projects/healthcare-insurance/</loc>
+    <loc>https://ghanendra-sdet.github.io/ghanendra-portfolio/projects/healthcare-insurance/</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://ghanendra-sdet.github.io/projects/travel-marketplace/</loc>
+    <loc>https://ghanendra-sdet.github.io/ghanendra-portfolio/projects/travel-marketplace/</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://ghanendra-sdet.github.io/projects/hrms/</loc>
+    <loc>https://ghanendra-sdet.github.io/ghanendra-portfolio/projects/hrms/</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://ghanendra-sdet.github.io/projects/lms/</loc>
+    <loc>https://ghanendra-sdet.github.io/ghanendra-portfolio/projects/lms/</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://ghanendra-sdet.github.io/projects/yobo/</loc>
+    <loc>https://ghanendra-sdet.github.io/ghanendra-portfolio/projects/yobo/</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://ghanendra-sdet.github.io/projects/ai-dispute-resolution-engine/</loc>
+    <loc>https://ghanendra-sdet.github.io/ghanendra-portfolio/projects/ai-dispute-resolution-engine/</loc>
     <priority>0.7</priority>
   </url>
 </urlset>
